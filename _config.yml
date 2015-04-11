@@ -2,10 +2,10 @@
 #Follow these 3 steps to set up your site.
 
 #Step 1: change YourUserName to the user name you chose on GitHub:
-user: BillMills
+user: minisciencegirl
 
 #Step 2: give your study group a name and a short description:
-title: Python Study Group
+title: R Study Group
 description: "A study group."
 
 #Step 3: press the green 'Commit Changes' button at the bottom of this page.
