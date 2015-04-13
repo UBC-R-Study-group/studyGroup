@@ -1,0 +1,8 @@
+---
+title: Andrew's practice R lesson
+text: Andrew MacDonald will practice teaching introductory R, preparing for a SWC workshop at SFU
+location: Biodiversity Research Centre room 224
+link: https://github.com/minisciencegirl/studyGroup/issues/1
+date: 2015-04-15
+
+---
