@@ -1,0 +1,8 @@
+---
+title: dplyr/magrittr Tutorial
+text: Come learn about the game-changing libraries dplyr and magrittr!
+location: BioDiv 224
+link: https://github.com/minisciencegirl/studyGroup/issues/6
+date: 2015-05-06
+
+---
