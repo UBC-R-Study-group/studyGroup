@@ -1,7 +1,7 @@
-Study Groups
-============
+Vancouver R Study Group
+=======================
 
-Welcome to [Mozilla Science Lab](http://www.mozillascience.org/)'s Study Group project! From here, we'll set you up with everything you need to start your own study group.
+Welcome to the Vancouver R Study Group! Check out our [event listings on our website](http://minisciencegirl.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/minisciencegirl/studyGroup/issues).
 
 ### Wait What's a 'Study Group'
 
