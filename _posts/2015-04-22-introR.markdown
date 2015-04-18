@@ -1,0 +1,8 @@
+---
+title: Introduction to R
+text: Evan Morien will give a guided introduction to first steps in R - great for first-time R users!
+location: UBC Biodiversity Research Center, room 224
+link: https://github.com/minisciencegirl/studyGroup/issues/7
+date: 2015-04-22
+
+---
