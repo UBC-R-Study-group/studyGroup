@@ -1,7 +1,7 @@
 ---
 title: Introduction to knitr and Rmd 
 text: Erica Acton will give a guided intro to the knitr package and R markdown! (for beginners)
-location: UBC Biodiversity Research Center, Rm224, May 13, 2015
+location: UBC Biodiversity Research Center, Rm224
 link: https://github.com/minisciencegirl/studyGroup/issues/4
 date: 2015-05-13
 ---
