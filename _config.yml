@@ -31,18 +31,7 @@ color:
   secondary: fec503
   secondary-dark: 333
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-# social:
-#   - title: twitter
-#     url: https://twitter.com/billdoesphysics
-#   - title: github
-#     url: https://github.com/BillMills/studyGroupTemplate
-
-# Postal address (add as many lines as necessary)
-#address:
-#  - line: 3481 Melrose Place
-#  - line: Beverly Hills, CA 90210
-
 # Build settings
 markdown: kramdown
 permalink: pretty
+regeneration: true
