@@ -1,0 +1,8 @@
+---
+title: Study Group Meetup
+text: How to loop, not loop, and speed loops up
+location: Biodiv 224
+link: https://github.com/minisciencegirl/studyGroup/issues/11
+date: 2015-05-27
+
+---
