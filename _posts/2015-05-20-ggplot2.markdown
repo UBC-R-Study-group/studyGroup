@@ -1,7 +1,7 @@
 ---
 title: Making graphics with the ggplot2 library
 text: Jeff Stafford will explain how to create good-looking plots using ggplot2.
-location: TBD
+location: TBD (2pm)
 link: https://github.com/minisciencegirl/studyGroup/issues/5
 date: 2015-05-20
 ---
