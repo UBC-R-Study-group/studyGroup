@@ -31,6 +31,11 @@ color:
   secondary: fec503
   secondary-dark: 333
 
+# redirect for case insensitivity
+gems:
+- jekyll-redirect-from
+
+
 # Build settings
 markdown: kramdown
 permalink: pretty
