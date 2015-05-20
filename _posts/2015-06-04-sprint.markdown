@@ -1,0 +1,8 @@
+---
+title: Mozilla Science Lab Global Sprint
+text: A two-day get-together to meet new people and hack on open science projects from around the world.
+location: Mozilla Vancouver
+link: https://github.com/minisciencegirl/studyGroup/issues/24
+date: 2015-06-04
+
+---
