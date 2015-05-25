@@ -1,6 +1,6 @@
 # ggplot2
 
- - **Authors**: @kazi11
+ - **Authors**: [@kazi11](https://github.com/kazi11)
  - **Research field**: any
  - **Lesson Topic**: using R's ggplot2 plotting library
 
