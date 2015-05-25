@@ -1,6 +1,6 @@
 # ggplot2
 
- - **Authors**: @ksamuk
+ - **Authors**: [@ksamuk](https://github.com/ksamuk)
  - **Research field**: any
  - **Lesson Topic**: using R's dplyr & magrittr libraries 
 
