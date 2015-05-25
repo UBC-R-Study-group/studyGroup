@@ -1,5 +1,8 @@
+---
 title: R + Googlespreadsheets
 text: Special workshop by Jenny Bryan
 location: TBD
 link: https://github.com/minisciencegirl/studyGroup/issues/22
 date: 2015-06-10, 3 PM
+
+---
