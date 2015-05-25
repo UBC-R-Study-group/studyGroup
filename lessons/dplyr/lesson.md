@@ -1,4 +1,4 @@
-# ggplot2
+# dplyr
 
  - **Authors**: [@ksamuk](https://github.com/ksamuk)
  - **Research field**: any
