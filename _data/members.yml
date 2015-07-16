@@ -5,7 +5,6 @@
     - Programming
     - Open Science
 
-
 - name: Amy Lee
   affiliation: University of British Columbia
   github: minisciencegirl
@@ -21,4 +20,10 @@
   interests:
     - Genomics
     - Bioinformatics
-    
+
+- name: Alyssa F
+  affiliation: University of British Columbia
+  github: alyeffy
+  interests:
+    - Data Science
+    - Bioinformatics
