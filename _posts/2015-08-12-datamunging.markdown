@@ -1,8 +1,8 @@
 ---
-title: Study Group Meetup
+title: Data Munging
 text: Learn how to use dplyr & plyr to manipulate dataframes
-location: TBD
-link: https://github.com/yourUserName/studyGroup/issues/1234
+location: TBD (LSI?)
+link: https://github.com/minisciencegirl/studyGroup/issues/42
 date: 2015-08-12
 
 ---
