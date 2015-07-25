@@ -3,6 +3,6 @@ title: Phylogenetic comparative analyses in R, Part 1
 text: How to map genotypic/ phenotypic variations to your trees?
 location: BioDiv 224
 link: https://github.com/minisciencegirl/studyGroup/issues/32
-date: 2015-08-19, 3pm
+date: 2015-08-26, 3pm
 
 ---
