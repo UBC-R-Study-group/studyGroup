@@ -3,6 +3,6 @@ title: Heatmap fun!
 text: Come learn how to use d3heatmap for your neatmaps
 location: BC Cancer Agency Dorothy Lam Room
 link: https://github.com/minisciencegirl/studyGroup/issues/47
-date: 2015-09-08, 5:30pm 
+date: 2015-09-08 5:30pm 
 
 ---
