@@ -3,6 +3,8 @@ title: R + Googlespreadsheets
 text: Special workshop by Jenny Bryan
 location: LSI 1330
 link: https://github.com/minisciencegirl/studyGroup/issues/22
-date: 2015-06-10, 3 PM
+date: 2015-06-10
+startTime: '15:00'
+endTime: '16:00'
 
 ---
