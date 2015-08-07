@@ -40,9 +40,9 @@ except ImportError:
 
 
 # Modify these variables in step 2 above ------------------- 
-APPLICATION_NAME = 'test' # app name you created in step one above
-CALENDAR_ID='USER@gmail.com' # google account name you created for your calendar
-POSTS_DIRECTORY="/path/to/your/studyGroup/_posts" # full path to your studyGroup/_posts directory.
+APPLICATION_NAME = 'StudyGroup_Calendar' # app name you created in step one above
+CALENDAR_ID='minisciencegirl@gmail.com' # google account name you created for your calendar
+POSTS_DIRECTORY="https://github.com/minisciencegirl/studyGroup/tree/gh-pages/_posts" # full path to your studyGroup/_posts directory.
 TIME_ZONE_STR = 'America/Vancouver' # not sure? check here: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 #-----------------------------------------------------------
 
