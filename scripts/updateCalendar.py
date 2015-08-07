@@ -80,7 +80,7 @@ def main():
             event = service.events().insert(calendarId=CALENDAR_ID, body=event).execute()
             print 'Event created: %s' % (event.get('summary'))
 
-     print next 10
+    # print next 10
     printNextEvents(service, 10)
 
 
