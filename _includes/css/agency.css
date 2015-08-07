@@ -281,7 +281,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(https://s3-us-west-2.amazonaws.com/webmaker-kits/learning%402x.jpg);
+    background-image: url({{ site.titleBackground }});
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -670,7 +670,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    background-image: url(img/map-image.png);
     background-position: center;
     background-repeat: no-repeat;
 }
