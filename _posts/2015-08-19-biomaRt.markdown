@@ -1,7 +1,9 @@
 ---
 title: Problem-solving with biomaRt by Jeff Stafford
 text: Learn to use the biomaRt web-interface package to retrieve the data you need
-location: BioDiv 224 - 3 pm
+location: BioDiv 224
 link: https://github.com/minisciencegirl/studyGroup/issues/52
 date: 2015-08-19
+startTime: '15:00'
+endTime: '16:00'
 ---
