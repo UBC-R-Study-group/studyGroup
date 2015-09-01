@@ -4,6 +4,6 @@ text: Bring your programming & open science projects to work on for a couple of 
 location: Biodiversity Room 224, UBC
 link: https://github.com/minisciencegirl/studyGroup/issues/55
 date: 2015-09-02
-startTime: '15:30'
-endTime: '17:30'
+startTime: '15:00'
+endTime: '17:00'
 ---
