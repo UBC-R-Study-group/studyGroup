@@ -1,0 +1,9 @@
+---
+title: Intro to Python, Part 2
+text: An introduction to for loops and conditions in Python.
+location: UBC Main Campus, Biodiversity Bldg Room 224
+link: https://github.com/minisciencegirl/studyGroup/issues/68
+date: 2015-10-21
+startTime: '15:30'
+endTime: '16:30'
+---
