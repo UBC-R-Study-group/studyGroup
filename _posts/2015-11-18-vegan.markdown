@@ -1,0 +1,9 @@
+---
+title: Let's learn vegan together!
+text: Coworking session to learn the vegan R package 
+location: BioDiv 224
+link: https://github.com/minisciencegirl/studyGroup/issues/54
+date: 2015-11-18
+startTime: '15:00'
+endTime: '17:00'
+---
