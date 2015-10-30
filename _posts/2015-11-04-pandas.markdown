@@ -1,0 +1,9 @@
+---
+title: Study Group Meetup
+text: Pandas introduction - continuing with python
+location: Biodiversity Research Centre 224
+link: https://github.com/minisciencegirl/studyGroup/issues/69
+date: 2015-11-04
+startTime: '15:30'
+endTime: '16:30'
+---
