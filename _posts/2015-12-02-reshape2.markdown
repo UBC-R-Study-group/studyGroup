@@ -1,7 +1,7 @@
 ---
-title: Reformatting data with reshape2
+title: Reformatting data with reshape2 & tidyr
 text: How to use reshape2 and some general R tips (like grep()) to make data easier to work with.
 location: BioDiv 224 - 3pm
 link: https://github.com/minisciencegirl/studyGroup/issues/72
-date: 2015-11-25
+date: 2015-12-02
 ---
