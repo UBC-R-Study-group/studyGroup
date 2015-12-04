@@ -1,5 +1,5 @@
 ---
-title: Study Group Meetup
+title: Python Pandas 2 + Other python 
 text: Pandas continues!
 location: UBC Biodiv 224
 link: https://github.com/minisciencegirl/studyGroup/issues/74
