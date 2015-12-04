@@ -1,0 +1,9 @@
+---
+title: Study Group Meetup
+text: Pandas continues!
+location: UBC Biodiv 224
+link: https://github.com/minisciencegirl/studyGroup/issues/74
+date: 2015-12-09
+startTime: '15:30'
+endTime: '16:30'
+---
