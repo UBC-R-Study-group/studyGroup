@@ -5,5 +5,5 @@ location: St. Augustine's Pub, Broadway x Commercial
 link: https://github.com/minisciencegirl/studyGroup/issues/73
 date: 2015-12-18
 startTime: '18:00'
-endTime: ?
+endTime: '00:00'
 ---
