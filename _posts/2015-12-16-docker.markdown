@@ -1,0 +1,9 @@
+---
+title: Introduction to Docker
+text: A first introduction to using Docker for reproducible research.
+location: UBC Main Campus, Beaty Biodiversity Bldg room 224
+link: https://github.com/minisciencegirl/studyGroup/issues/75
+date: 2015-12-16
+startTime: '15:30'
+endTime: '00:00'
+---
