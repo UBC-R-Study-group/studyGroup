@@ -1,7 +1,7 @@
 ---
 title: Study Group Holiday Hacky Hour 
 text: Bring everyone in the scientific coding and open science community for a year end wrap party!
-location: St. Augustine's Pub, Broadway x Commercial
+location: Charlatan, Commercial x Grant
 link: https://github.com/minisciencegirl/studyGroup/issues/73
 date: 2015-12-18
 startTime: '18:00'
