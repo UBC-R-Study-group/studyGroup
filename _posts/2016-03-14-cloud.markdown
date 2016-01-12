@@ -1,0 +1,9 @@
+---
+title: Introduction to Cloud Computing
+text: Walk through the basics of using Amazon Web Services to do fast and powerful data analysis in the cloud.
+location: UBC Biodiversity Bldg, Rm 224
+link: https://github.com/minisciencegirl/studyGroup/issues/90
+date: 2016-03-14
+startTime: '13:00'
+endTime: '14:00'
+---

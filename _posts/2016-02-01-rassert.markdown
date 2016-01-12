@@ -1,0 +1,9 @@
+---
+title: Assertions in R
+text: Exploring the various ways to make assertions about code and data in R.
+location: UBC Biodiversity Bldg, Rm 224
+link: https://github.com/minisciencegirl/studyGroup/issues/84
+date: 2016-02-01
+startTime: '13:00'
+endTime: '14:00'
+---
