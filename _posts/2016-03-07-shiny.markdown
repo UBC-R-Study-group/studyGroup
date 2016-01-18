@@ -1,0 +1,9 @@
+---
+title: Intro to R-Shiny & Leaflet 
+text: Simon Goring will be showing us how to make web apps in R, including maps from Leaflet
+location: UBC Biodiversity Bldg, Rm 224
+link: https://github.com/minisciencegirl/studyGroup/issues/98
+date: 2016-03-07
+startTime: '13:00'
+endTime: '14:00'
+---
