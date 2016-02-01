@@ -3,7 +3,7 @@ title: Introduction to R's Broom
 text: Introduction to Broom, a tool for tidying up statistical objects into convenient R dataframes.
 location: UBC Biodiversity Bldg, Rm 224
 link: https://github.com/minisciencegirl/studyGroup/issues/86
-date: 2016-02-29
+date: 2016-02-15
 startTime: '13:00'
 endTime: '14:00'
 ---
