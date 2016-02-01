@@ -3,7 +3,7 @@ title: Introduction to Pandas
 text: Learn how to make and use R-like dataframes in Python, using Pandas.
 location: UBC Biodiversity Bldg, Rm 224
 link: https://github.com/minisciencegirl/studyGroup/issues/88
-date: 2016-02-15
+date: 2016-02-29
 startTime: '13:00'
 endTime: '14:00'
 ---
