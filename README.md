@@ -123,3 +123,4 @@ Your website includes a gallery of participants in your Study Group; adding peop
     - list one to three
     - different interests
 ```
+
