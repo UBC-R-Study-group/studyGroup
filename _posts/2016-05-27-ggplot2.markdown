@@ -1,6 +1,6 @@
 ---
 title: R Utility Belt: Plotting in R with ggplot2
-text: A beginner's introduction to plotting in R using ggplot2
+text: "A beginner's introduction to plotting in R using ggplot2"
 location: UBC Koerner Library, Room 153
 link: https://github.com/minisciencegirl/studyGroup/issues/112
 date: 2016-05-27
