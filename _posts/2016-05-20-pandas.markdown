@@ -1,0 +1,9 @@
+---
+title: Managing Data in Python with Pandas
+text: Learn how to read, manage and plot data in Python using the Pandas package.
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/112
+date: 2016-05-20
+startTime: '13:00'
+endTime: '14:00'
+---
