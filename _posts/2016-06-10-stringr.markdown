@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt: Text manipulation with stirngr and lubridate"
+text: "A beginner's introduction to analyzing text in R."
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/115
+date: 2016-06-10
+startTime: '13:00'
+endTime: '14:00'
+---
