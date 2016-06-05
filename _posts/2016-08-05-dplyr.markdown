@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt: Data Wrangling with dplyr and magrittr"
+text: "A beginner's introduction to manipulating data tables in R."
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/123
+date: 2016-08-05
+startTime: '13:00'
+endTime: '14:00'
+---

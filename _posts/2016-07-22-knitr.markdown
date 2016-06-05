@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt: Making Beautiful Documents with knitr and Rmd"
+text: "A beginner's introduction to making reports, PDFs and web documents from code and data, directly in RStudio."
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/122
+date: 2016-07-22
+startTime: '13:00'
+endTime: '14:00'
+---
