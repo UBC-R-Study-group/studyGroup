@@ -1,0 +1,9 @@
+---
+title: "Introduction to Network Analysis"
+text: "Theory and implementation in R of basic network analysis."
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/126
+date: 2016-06-17
+startTime: '13:00'
+endTime: '14:00'
+---
