@@ -1,0 +1,9 @@
+---
+title: "Remake: managing complicated projects in R"
+text: "An introduction to remake, a tool for intelligently running and re-running parts of an R project."
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/130
+date: 2016-07-29
+startTime: '16:00'
+endTime: '17:00'
+---
