@@ -1,0 +1,9 @@
+---
+title: Functional programming, iteration and aggregation in R using purrr
+text: Learn the basics of functional programming in R, using the purrr package.
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/131
+date: 2016-08-12
+startTime: '13:00'
+endTime: '14:00'
+---
