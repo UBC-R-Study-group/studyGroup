@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt"
+text: "Clean and Reproducible Data Manipulation with dplyr"
+location: Koerner Library, UBC, Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/137
+date: 2016-10-03
+startTime: '15:00'
+endTime: '16:00'
+---
