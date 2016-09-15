@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt"
+text: "Plotting with ggplot2"
+location: Koerner Library, UBC, Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/136
+date: 2016-09-19
+startTime: '15:00'
+endTime: '16:00'
+---
