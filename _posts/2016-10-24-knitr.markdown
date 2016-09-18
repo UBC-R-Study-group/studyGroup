@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt"
+text: "How to render your R code with knitr and Rmarkdown?"
+location: Koerner Library, UBC, Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/138
+date: 2016-10-24
+startTime: '15:00'
+endTime: '16:00'
+---
