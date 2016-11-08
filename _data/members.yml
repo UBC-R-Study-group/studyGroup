@@ -37,10 +37,14 @@
 
 
 - name: Simon Goring
-  affiliation: University of Wisconsin Madison
+  affiliation: University of Wisconsin-Madison
   github: SimonGoring
   interests:
-    - PaleoEcology
+    - Ecology
+    - Earth Sciences
+    - Paleoecology
+    - Fun times with R
+    - Long walks on the beach
 
 - name: Amy Lee
   affiliation: University of British Columbia
