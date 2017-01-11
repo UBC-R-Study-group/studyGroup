@@ -1,4 +1,4 @@
---
+---
 title: "Co-working"
 text: "Join us with your coding projects and to plan the winter semester 2017!"
 location: Koerner Library 153
