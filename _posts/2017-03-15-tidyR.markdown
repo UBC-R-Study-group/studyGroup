@@ -1,0 +1,9 @@
+---
+title: "Utility Belt: tidyR"
+text: "Taming your messy dataframe!"
+location: Koerner Library, UBC, Room 153
+link: https://github.com/minisciencegirl/studyGroup/issues/159
+date: 2017-03-15
+startTime: '15:00'
+endTime: '16:00'
+---
