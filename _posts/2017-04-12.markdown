@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt: Plotting with ggplot2 "
+text: "To boldy plot what no one has plotted before! Learn ggplot2 - because everyone needs to visualize and sanity check their data at some point."
+location: Koerner Library 153
+link: https://github.com/minisciencegirl/studyGroup/issues/162
+date: 2017-04-12
+startTime: '15:00'
+endTime: '16:00'
+---
