@@ -1,4 +1,4 @@
-----
+---
 title: "Study Group Co-Working Session"
 text: "Ask questions, get feedback, and learn new things while working on your own projects. All levels!"
 location: Koerner Library 153
