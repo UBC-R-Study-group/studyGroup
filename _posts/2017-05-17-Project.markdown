@@ -1,9 +1,0 @@
----
-title: "Co-working Project: Should I stay or should I go? "
-text: "Come work on a group project together to hone your skills in Shiny, Leaflet, API, and time series analysis"
-location: Koerner Library 153
-link: https://github.com/minisciencegirl/studyGroup/issues/154
-date: 2017-05-17
-startTime: '15:00'
-endTime: '16:00'
----
