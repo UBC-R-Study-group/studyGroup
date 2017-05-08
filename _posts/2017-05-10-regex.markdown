@@ -1,0 +1,9 @@
+---
+title: "R Utility Belt: Regular Expressions and Stringr"
+text: "Be String Savvy! Learn regex and the stringr package and make your data-cleaning life easier."
+location: Koerner Library 153
+link: https://github.com/minisciencegirl/studyGroup/issues/164
+date: 2017-05-10
+startTime: '15:00'
+endTime: '16:00'
+---
