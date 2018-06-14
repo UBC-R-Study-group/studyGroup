@@ -81,7 +81,7 @@ First we read in a new dataset (and take a look at it):
 vote_data <- read_csv("data/2016_presidential_election_state_vote.csv")
 print(vote_data)
 ```
-*note - this data was sourced from https://en.wikipedia.org/wiki/United_States_presidential_election*
+*note - this data was sourced from https://uselectionatlas.org/RESULTS/evote.php?year=2016&f=0*
 
 And let's look at our prop_data data frame again:
 ```{r}
