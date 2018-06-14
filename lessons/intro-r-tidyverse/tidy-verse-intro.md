@@ -37,7 +37,6 @@ print(prop_data)
 ```
 
 ## Selecting columns
-
 If we want to select a column from a data frame, we can use the `select` function. Here we select the column named `state` from the data frame named `prop_data`:
 ```{r}
 select(prop_data, state)
@@ -62,4 +61,13 @@ filter(prop_data, state == "NY")
 We can also filter rows containing values below or above a threshold, for example rows where the mean commute time in minutes is > 21.5:
 ```{r}
 filter(prop_data, mean_commute_minutes > 21.5)
+```
+
+## The pipe (`%>%`) operator
+In R we can use a pipe operator, `%>%`, to efficiently combine functions. You can think of the pipe as a physical pipe - taking the output from the expression on the left-handside of the pipe and passing it as the input to first expression on the right-handside of the pipe.
+
+Here is an example of using the pipe to combine `filter` and `select` to subset the median household income and the median property value for the state of California:
+```{r}
+filter(prop_data, state == "CA")
+select(ca_prop_data, med_income, med_prop_val)
 ```
