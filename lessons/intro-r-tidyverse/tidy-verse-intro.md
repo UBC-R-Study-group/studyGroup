@@ -18,7 +18,7 @@ library(tidyverse)
 
 ## loading data
 
-Set your working directory in R to where you saved [this folder](https://github.com/minisciencegirl/studyGroup/files/2101006/intro-r-tidyverse.zip) to.
+Set your working directory in R to where you saved the unzipped version of [this folder](https://github.com/minisciencegirl/studyGroup/files/2101006/intro-r-tidyverse.zip) to.
 ```{r}
 read_csv("data/state_property_data.csv")
 ```
