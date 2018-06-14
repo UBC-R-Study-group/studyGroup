@@ -1,4 +1,6 @@
 # Short intro to R via the `tidyverse`
+author: Tiffany Timbers
+license: Creative Commons Attribution license
 
 This is a list of the commands we will explore today, as well as some exercises we will try!
 
