@@ -1,0 +1,9 @@
+---
+title: Non-standard evaluation in R
+text: Join us for a hands-on session on Non-standard evaluation in R!
+location: Koerner Library Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/176
+date: 2018-06-28
+startTime: '09:00'
+endTime: '10:00'
+---
