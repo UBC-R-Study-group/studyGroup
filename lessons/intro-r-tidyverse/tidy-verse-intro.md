@@ -36,3 +36,30 @@ To print an object to the console in R we can use the `print` function:
 print(prop_data)
 ```
 
+## Selecting columns
+
+If we want to select a column from a data frame, we can use the `select` function. Here we select the column named `state` from the data frame named `prop_data`:
+```{r}
+select(prop_data, state)
+```
+
+We can also select multiple columns:
+```{r}
+select(prop_data, state, med_prop_val, mean_commute_minutes)
+```
+
+As well as a range of columns:
+```{r}
+select(prop_data, state:med_prop_val)
+```
+## Filtering rows
+
+If we want to filter a row from a data frame, we can use the `filter` function. Here we filter the rows where the `state` name is equal to NY from the data frame named `prop_data`:
+```{r}
+filter(prop_data, state == "NY")
+```
+
+We can also filter rows containing values below or above a threshold, for example rows where the mean commute time in minutes is > 21.5:
+```{r}
+filter(prop_data, mean_commute_minutes > 21.5)
+```
