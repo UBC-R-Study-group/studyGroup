@@ -20,10 +20,11 @@ library(tidyverse)
 
 ## loading data
 
-Set your working directory in R to where you saved the unzipped version of [this folder](https://github.com/minisciencegirl/studyGroup/files/2101006/intro-r-tidyverse.zip) to.
+Set your working directory in R to where you saved the unzipped version of [this folder](https://github.com/minisciencegirl/studyGroup/files/2101006/intro-r-tidyverse.zip) to. And use `read_csv` to load your data.
 ```{r}
 read_csv("data/state_property_data.csv")
 ```
+*note - this data was sourced from https://datausa.io/*
 
 ## creating objects in R
 
@@ -80,6 +81,8 @@ First we read in a new dataset (and take a look at it):
 vote_data <- read_csv("data/2016_presidential_election_state_vote.csv")
 print(vote_data)
 ```
+*note - this data was sourced from https://en.wikipedia.org/wiki/United_States_presidential_election*
+
 And let's look at our prop_data data frame again:
 ```{r}
 print(prop_data)
