@@ -68,8 +68,7 @@ In R we can use a pipe operator, `%>%`, to efficiently combine functions. You ca
 
 Here is an example of using the pipe to combine `filter` and `select` to subset the median household income and the median property value for the state of California:
 ```{r}
-filter(prop_data, state == "CA")
-select(ca_prop_data, med_income, med_prop_val)
+filter(prop_data, state == "CA") %>% select(med_income, med_prop_val)
 ```
 
 We can even use it to chain together more than 2 functions! Here we will use it to join together 2 datasets and then select and filter the joined data:
