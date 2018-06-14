@@ -3,7 +3,7 @@ title: Introduction to R via the Tidyverse
 text: Come learn R!
 location: Koerner Library Room 216
 link: https://github.com/minisciencegirl/studyGroup/issues/174
-date: 2018-06-13
+date: 2018-06-14
 startTime: '09:00'
 endTime: '10:00'
 ---
