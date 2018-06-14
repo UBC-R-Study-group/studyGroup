@@ -71,3 +71,22 @@ Here is an example of using the pipe to combine `filter` and `select` to subset 
 filter(prop_data, state == "CA")
 select(ca_prop_data, med_income, med_prop_val)
 ```
+
+We can even use it to chain together more than 2 functions! Here we will use it to join together 2 datasets and then select and filter the joined data:
+
+First we read in a new dataset (and take a look at it):
+```{r}
+vote_data <- read_csv("data/2016_presidential_election_state_vote.csv")
+print(vote_data)
+```
+And let's look at our prop_data data frame again:
+```{r}
+print(prop_data)
+```
+
+Since both data frames have a state column, we can join the two data frames on that column, and then perform select and filter on that joined data frame to get the median household income for DC and which party DC voted for in the 2016 Presidential election:
+```{r}
+left_join(prop_data, vote_data, by = "state") %>%
+    filter(state == "DC") %>%
+    select(med_income, party)
+```
