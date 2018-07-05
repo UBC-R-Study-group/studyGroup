@@ -37,8 +37,8 @@ Tidy Data and Data Analysis Pipeline
 -   What makes the first set tidy while the second is untidy?
 -   Which is easier on the eyes?
 -   How would you figure out:
--   What's the total number of words spoken by male hobbits in all three movies?
--   Is there a more talkative `Race`?
+ -   What's the total number of words spoken by male hobbits in all three movies?
+ -   Is there a more talkative `Race`?
 
 Using a previously saved tidied dataset, we can see it is very easy to manipulate the tidy version:
 
