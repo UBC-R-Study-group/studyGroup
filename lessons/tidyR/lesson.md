@@ -1,10 +1,25 @@
 tidyr Tutorial
 ================
 Katharine Sedivy-Haley and Amy Lee (@minisciencegirl)
-2018-07-04
+2018-07-05
 
-Tidy Data and Data Analysis Pipeline
-------------------------------------
+Outline
+-------
+
+1.  [Why Tidy?](#why-tidy)
+2.  [How to Tidy](#how-to-tidy)
+    -   Challenge Question 1
+    -   Challenge Question 2
+3.  [Other useful functions from tidyr](#other-useful-functions-from-tidyr): Separate and Unite
+    -   Challenge Question 3
+4.  [Final Example](#final-example): See how Kate used tidyr last week!
+5.  [Further Reading](#further-reading)
+6.  [Solutions](#solutions) for Challenge Questions
+
+Why Tidy?
+---------
+
+### Tidy Data and Data Analysis Pipeline
 
 ![Data Analysis Pipeline, Joseph V. Casillas.](DataAnalysis.png)
 
@@ -29,7 +44,7 @@ Tidy Data and Data Analysis Pipeline
 
 ### Example of *tidy* data
 
-![Tidy data, Jenny Bryan.](tidy_lotr.png)
+![Tidy data, Jenny Bryan.](tidy_lotr.PNG)
 
 ### Consider the differences...
 
@@ -37,8 +52,8 @@ Tidy Data and Data Analysis Pipeline
 -   What makes the first set tidy while the second is untidy?
 -   Which is easier on the eyes?
 -   How would you figure out:
- -   What's the total number of words spoken by male hobbits in all three movies?
- -   Is there a more talkative `Race`?
+    -   What's the total number of words spoken by male hobbits in all three movies?
+    -   Is there a more talkative `Race`?
 
 Using a previously saved tidied dataset, we can see it is very easy to manipulate the tidy version:
 
@@ -98,7 +113,12 @@ lotr_tidy_pre %>%
     ## 2 Hobbit  8796
     ## 3    Man  8712
 
-### How do we turn these tables into a tidy dataframe?
+Note: for explanations of the `%>%`, `count`, `group_by`, or `summarize` operations, see Jenny Bryan's dplyr material: [part 1 with the pipe](http://stat545.com/block009_dplyr-intro.html) and [part 2 dplyr functions](http://stat545.com/block010_dplyr-end-single-table.html).
+
+How to Tidy
+-----------
+
+### How do we turn the LotR tables into a tidy dataframe?
 
 Let's read these dataframes in:
 
@@ -137,6 +157,17 @@ rking <- read_csv("The_Return_Of_The_King.csv")
     ##   Female = col_integer(),
     ##   Male = col_integer()
     ## )
+
+``` r
+fship #look at one untidy dataframe
+```
+
+    ## # A tibble: 3 x 4
+    ##                         Film   Race Female  Male
+    ##                        <chr>  <chr>  <int> <int>
+    ## 1 The Fellowship Of The Ring    Elf   1229   971
+    ## 2 The Fellowship Of The Ring Hobbit     14  3644
+    ## 3 The Fellowship Of The Ring    Man      0  1995
 
 Collect untidy dataframes into one dataframe:
 
@@ -200,15 +231,7 @@ Sometimes you want a wide or untidy dataset - for example, making a table for hu
 In the EDAWR dataset, `cases`, we have the number of tuberculosis cases reported in France, Germany and United States from 2011 to 2013. What are the total number of tuberculosis cases reported over three years for each country?
 
 ``` r
-devtools::install_github("rstudio/EDAWR")
-```
-
-    ## Using GitHub PAT from envvar GITHUB_PAT
-
-    ## Skipping install of 'EDAWR' from a github remote, the SHA1 (fbfee984) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
-
-``` r
+#devtools::install_github("rstudio/EDAWR")
 library(EDAWR)
 ```
 
@@ -232,8 +255,10 @@ cases
     ## 2      DE  5800  6000  6200
     ## 3      US 15000 14000 13000
 
-Other useful functions from tidyr - Separate and Unite
-------------------------------------------------------
+Other useful functions from tidyr
+---------------------------------
+
+### Separate and Unite
 
 Let's use the EDAWR dataset again. This time, we are going to use the `storms` data, which has the maximum wind speeds for six Atlantic hurricanes.
 
@@ -261,10 +286,139 @@ storms.sep <- separate(storms, date, c("year", "month", "day"), sep = "-")
 
 How do you combine the three separate columns, `year`, `month`, `day`, that you just created in `storms.sep` back into one column, `date`? Hint: `unite()` works the opposite way as `separate()`.
 
+Final Example
+-------------
+
+A piece of code I actually used in the last week to make a quick comparison. I was looking at the number of biological pathways that were altered by infection by either Salmonella or Chlamydia, in two cell types. I wanted to see whether the number of shared pathways vs those unique to either cell type were similar for the different infections. Since there were different numbers of total pathways changed, I also wanted to see if the percentage of shared vs unique pathways were similar. I was starting from an untidy data set, without percentages. I'm going to show the code broken up step by step, and then a neater version without breaks to print intermediate steps.
+
+First I read in the untidy data frame, and tidy it by gathering.
+
+``` r
+library(tidyverse)
+
+(paths <- read_csv("example.csv")) #read untidy data frame
+```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   Shared = col_integer(),
+    ##   CellType1 = col_integer(),
+    ##   CellType2 = col_integer(),
+    ##   Infection = col_character()
+    ## )
+
+    ## # A tibble: 2 x 4
+    ##   Shared CellType1 CellType2  Infection
+    ##    <int>     <int>     <int>      <chr>
+    ## 1     24        31        13 Salmonella
+    ## 2     38        79        44  Chlamydia
+
+``` r
+#First I tidy the data frame by gathering
+(paths_tidy <- paths %>%
+  gather(key = "Overlap", value = "Number", Shared:CellType2))
+```
+
+    ## # A tibble: 6 x 3
+    ##    Infection   Overlap Number
+    ##        <chr>     <chr>  <int>
+    ## 1 Salmonella    Shared     24
+    ## 2  Chlamydia    Shared     38
+    ## 3 Salmonella CellType1     31
+    ## 4  Chlamydia CellType1     79
+    ## 5 Salmonella CellType2     13
+    ## 6  Chlamydia CellType2     44
+
+Now, in order to calculate the percent, I use `group_by` and `mutate` to make a column containing the total number of pathways for each type of infection, then use that Total to calculate percents.
+
+``` r
+(paths_calc <- paths_tidy %>%
+  group_by(Infection) %>%
+  mutate(Total = sum(Number),
+         Percent = 100*Number/Total) )
+```
+
+    ## # A tibble: 6 x 5
+    ## # Groups:   Infection [2]
+    ##    Infection   Overlap Number Total  Percent
+    ##        <chr>     <chr>  <int> <int>    <dbl>
+    ## 1 Salmonella    Shared     24    68 35.29412
+    ## 2  Chlamydia    Shared     38   161 23.60248
+    ## 3 Salmonella CellType1     31    68 45.58824
+    ## 4  Chlamydia CellType1     79   161 49.06832
+    ## 5 Salmonella CellType2     13    68 19.11765
+    ## 6  Chlamydia CellType2     44   161 27.32919
+
+I could make two different plots with Number and Percent here. However, I want to display Number and Percent in two panels of the same plot, so I'm actually going to gather this again. (Note - this is a bit of a quick and dirty way to display side by side graphs.)
+
+``` r
+(paths_calc <- paths_calc %>%
+  gather(key = "Type", value = "Value", Number, Percent) )
+```
+
+    ## # A tibble: 12 x 5
+    ## # Groups:   Infection [2]
+    ##     Infection   Overlap Total    Type    Value
+    ##         <chr>     <chr> <int>   <chr>    <dbl>
+    ##  1 Salmonella    Shared    68  Number 24.00000
+    ##  2  Chlamydia    Shared   161  Number 38.00000
+    ##  3 Salmonella CellType1    68  Number 31.00000
+    ##  4  Chlamydia CellType1   161  Number 79.00000
+    ##  5 Salmonella CellType2    68  Number 13.00000
+    ##  6  Chlamydia CellType2   161  Number 44.00000
+    ##  7 Salmonella    Shared    68 Percent 35.29412
+    ##  8  Chlamydia    Shared   161 Percent 23.60248
+    ##  9 Salmonella CellType1    68 Percent 45.58824
+    ## 10  Chlamydia CellType1   161 Percent 49.06832
+    ## 11 Salmonella CellType2    68 Percent 19.11765
+    ## 12  Chlamydia CellType2   161 Percent 27.32919
+
+``` r
+paths_calc %>%
+  ggplot(aes(x = Overlap, 
+             y = Value,
+             fill = Infection)) +
+    geom_bar(stat="identity", 
+           position = "dodge") + #places filled columns next to each other
+    facet_wrap(~Type, scales = "free") #gives me panels using different scales
+```
+
+![](lesson_files/figure-markdown_github/unnamed-chunk-10-1.png)
+
+So I see that more pathways changed in the Chlamydia infection, but there are a higher percentage of shared pathways in the Salmonella infection.
+
+The simplified code looks like this:
+
+``` r
+read_csv("example.csv") %>%
+  gather(key = "Overlap", value = "Number", Shared:CellType2) %>%
+  group_by(Infection) %>%
+  mutate(Total = sum(Number),
+         Percent = 100*Number/Total) %>% 
+  gather(key = "Type", value = "Value", Number, Percent) %>%
+  ggplot(aes(x = Overlap, 
+             y = Value,
+             fill = Infection)) +
+    geom_bar(stat="identity", position = "dodge") +
+    facet_wrap(~Type, scales = "free")
+```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   Shared = col_integer(),
+    ##   CellType1 = col_integer(),
+    ##   CellType2 = col_integer(),
+    ##   Infection = col_character()
+    ## )
+
+![](lesson_files/figure-markdown_github/unnamed-chunk-11-1.png)
+
 Further Reading
 ---------------
 
 #### More tutorials
+
+Further examples and more in-depth coverage.
 
 -   Jenny Bryan's [LOTR GitHub Repo](https://github.com/jennybc/lotr-tidy), with the Lord of the Rings dataset.
 -   [wmhall's tutorial](https://github.com/wmhall/tidyr_lesson/blob/master/tidyr_lesson.md)
@@ -276,3 +430,67 @@ Another package available, covering a wider array of data reshaping tools than t
 
 -   `melt` performs the function of `gather`
 -   `cast` performs the function of `spread`
+
+Solutions
+---------
+
+#### Challenge 1
+
+How would you convert the `lotr_tidy` dataframe back into the `lotr_untidy` dataframe?
+
+``` r
+spread(lotr_tidy, key="Gender", value="Words")
+```
+
+    ## # A tibble: 9 x 4
+    ##                         Film   Race Female  Male
+    ## *                      <chr>  <chr>  <int> <int>
+    ## 1 The Fellowship Of The Ring    Elf   1229   971
+    ## 2 The Fellowship Of The Ring Hobbit     14  3644
+    ## 3 The Fellowship Of The Ring    Man      0  1995
+    ## 4     The Return Of The King    Elf    183   510
+    ## 5     The Return Of The King Hobbit      2  2673
+    ## 6     The Return Of The King    Man    268  2459
+    ## 7             The Two Towers    Elf    331   513
+    ## 8             The Two Towers Hobbit      0  2463
+    ## 9             The Two Towers    Man    401  3589
+
+#### Challenge 2
+
+In the EDAWR dataset, `cases`, we have the number of tuberculosis cases reported in France, Germany and United States from 2011 to 2013. What are the total number of tuberculosis cases reported over three years for each country?
+
+``` r
+cases %>%
+  gather(key = "year", value = "cases", `2011`, `2012`, `2013`) %>%
+  group_by(country) %>%
+  summarize(cases = sum(cases))
+```
+
+    ## # A tibble: 3 x 2
+    ##   country cases
+    ##     <chr> <dbl>
+    ## 1      DE 18000
+    ## 2      FR 20900
+    ## 3      US 42000
+
+``` r
+# Note: alternatively we could use gather(key="year", value="cases", `2011`:`2013`) to refer to all columns from 2011 to 2013, or (key="year", value="cases", -country) to gather all columns other than the country
+```
+
+### Challenge 3
+
+How do you combine the three separate columns, `year`, `month`, `day`, that you just created in `storms.sep` back into one column, `date`? Hint: `unite()` works the opposite way as `separate()`.
+
+``` r
+unite(storms.sep, date, c("year", "month", "day"), sep = "-")
+```
+
+    ## # A tibble: 6 x 4
+    ##     storm  wind pressure       date
+    ## *   <chr> <int>    <int>      <chr>
+    ## 1 Alberto   110     1007 2000-08-03
+    ## 2    Alex    45     1009 1998-07-27
+    ## 3 Allison    65     1005 1995-06-03
+    ## 4     Ana    40     1013 1997-06-30
+    ## 5  Arlene    50     1010 1999-06-11
+    ## 6  Arthur    45     1010 1996-06-17
