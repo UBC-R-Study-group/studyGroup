@@ -1,0 +1,9 @@
+---
+title: Introduction to tidyR (Tidyverse)
+text: Want to know how to wrangle your messy dataframe? 
+location: Koerner Library Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/178
+date: 2018-07-05
+startTime: '09:00'
+endTime: '10:00'
+---
