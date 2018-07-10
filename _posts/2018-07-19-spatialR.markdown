@@ -1,0 +1,9 @@
+---
+title: Spatial data in R
+text: Come learn about how you can work with spatial data in R!
+location: Koerner Library Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/175
+date: 2018-07-19
+startTime: '09:00'
+endTime: '10:00'
+---
