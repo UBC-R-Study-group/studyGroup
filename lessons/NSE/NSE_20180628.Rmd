@@ -1,0 +1,204 @@
+---
+title: "Non-standard Evaluation Tutorial"
+author: "Amy Lee (@minisciencegirl)"
+date: '2018-06-28'
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+
+#### BEFORE
+This seems to be a common sentiment when I start googling about non-standard evaluation.
+![](figures/I_hate_NSE.png)
+
+#### AFTER
+Hopefully, by the end of today's tutorial, your feelings towards non-standard evaluation will change.
+![](figures/Oprah.jpg)
+
+### What is non-standard evaluation (NSE)?
+> NSE ... is a catch-all term that means they don't follow the usual R rules of evaluation. Instead, they capture the expression that you typed and evaluate it in a custom way. (Programming with dplyr)
+
+So what is standard evaluation? A good analogy that I saw puts it this way: 
+> In standard evaluation R is like a child that receives candy from his grandmother and puts it in his mouth immediately. Every input is evaluated right away. (Edwin Thoen)
+
+Here is an example of standard evaluation:
+```{r}
+f <- function(x){ x }
+
+f(2)
+
+x <- 3
+
+f(x)
+```
+
+
+#### Examples of NSE in action
+You can see examples of NSE implementation in both base R and tidyverse.
+
+For example, have you ever wondered why you can skip quotes when you call a library?
+```{r}
+library("dplyr")
+```
+If you are feeling lazy, not putting quotes around `dplyr` will also load the package:
+```{r}
+library(dplyr)
+```
+
+Or how does R know what to put on the x axis and y axis in a plot without you explicitly specifying axis labels? 
+```{r}
+x <- seq(0, 2 * pi, length = 100)
+sinx <- sin(x)
+plot(x, sinx, type = "l")
+```
+
+
+I am not really going to spend any time talking about NSE implementation in base R today, but rather focusing our discussion on tidyeval, which helps us use tidyverse functions not only for interactive use, but "programmaticatly" (i.e. writing functions).
+
+The major benefit for using NSE in dplyr functions is that you can express operations on data frames succinctly and not have to repeate the name of the dataframe.
+
+* For example, you can write `filter(df, x == 1, y == 2, z == 3)`
+* Instead of `df[df$s == 1 & df$y == 2 & df$z == 3, ]`
+
+However, this leads to a whole host of problem when you are trying to program with dplyr functions. 
+
+
+
+Let's load tidyverse:
+```{r}
+library(tidyverse)
+```
+
+
+### dplyr arguments are not referentially transparent
+Most dplyr arguments are not referentially transparent. That means you can’t replace a value with a seemingly equivalent object that you’ve defined elsewhere.
+
+Let's see what I meant here:
+```{r}
+# toy dataframe
+df <- tibble(x = 1:3, y = 3:1)
+
+filter(df, x == 1)
+```
+
+This is not equivalent to this code: 
+```{r error = TRUE}
+my_var <- x
+
+filter(df, my_var == 1)
+```
+Wait a second, where is it grabbing `x`? 
+
+This is also not equivalent to this code:
+```{r}
+my_var <- "x"
+
+filter(df, my_var == 1)
+```
+
+Furthermore, depending on what variables are defined where, `filter(df, x == y)` could be equivalent to any of:
+
+* `df[df$x == df$y, ]`
+* `df[df$x == y, ]`
+* `df[x == df$y, ]`
+* `df[x == y, ]`
+ 
+This makes it hard to create functions with arguments that change how dplyr verbs are computed and can make functions more unpredictable than you like.
+
+
+### tidyeval verbs come to the rescue!
+Here are tools for your escape hatch:
+
+* `quo`: quotes its input (i.e. captures R code without evaluation) and captures the current environment
+* `enquo`: takes a symbol referring to a function argument, quotes the R code supplied to the argument, captures the envrionemtn where the function was called
+* `!!`: unquoting
+
+#### Example: how to vary the grouping variable for a data summarization?
+Here is our toy dataframe, `toy.df`
+```{r}
+toy.df <- tibble(
+  g1 = c(1, 1, 2, 2, 2),
+  g2 = c(1, 2, 1, 2, 1),
+  a = sample(5),
+  b = sample(5)
+)
+```
+
+And we can group by grouping variable, g1, then calculate mean of a, or group by grouping variable, g2, and so on ...
+```{r}
+toy.df %>% 
+  group_by(g1) %>% 
+  summarise(a = mean(a))
+
+toy.df %>% 
+  group_by(g2) %>% 
+  summarise(a = mean(a))
+```
+
+OK, what if we want to write a function, `my_summarise`, so that I don't have to copy and paste the code?
+```{r error = TRUE}
+my_summarise <- function(df, group_var) {
+  df %>%
+    group_by(group_var) %>%
+    summarise(a = mean(a))
+}
+
+my_summarise(toy.df, g1)
+```
+Huh. That didn't work.
+
+What if I provide the variable name as a string?
+```{r error = TRUE}
+my_summarise(toy.df, "g1")
+```
+
+Nope. This still doesn't work. 
+This is because `group_by` doesn't evaluate its input, but rather that `group_by` quotes its input. 
+
+To make this function work, we need to do two things:
+
+(1) we need to quote the input ourselves (which is where the function `enquo()` comes in)
+(2) and then we need to tell `group_by` not to quote its input because we've done it (using `!!`)
+
+```{r}
+my_summarise <- function(df, group_var) {
+  group_var <- enquo(group_var)
+  
+  df %>%
+    group_by(!! group_var) %>%
+    summarise(a = mean(a))
+}
+
+my_summarise(toy.df, g1)
+```
+
+#### Challenge Question 1
+Using the toy dataframe above, `toy.df`, how do you write a second summarise function that calculates the mean, the sum and tally the number of observations?
+
+Hint: Here is how you would perform this interatively
+```{r}
+summarise(toy.df, mean = mean(a), sum = sum(a), n = n())
+```
+
+Answer:
+```{r}
+my_summarise2 <- function(df, my_var){
+  my_var <- enquo(my_var)
+  
+  summarise(df,
+            mean = mean(!! my_var),
+            sum = sum(!! my_var),
+            n = n()
+            )
+}
+
+my_summarise2(toy.df, a*b)
+```
+
