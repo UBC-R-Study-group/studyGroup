@@ -1,0 +1,9 @@
+---
+title: How to plot like a master plotter with ggplot2!
+text: Learn ggplot2 - because everyone needs to visualize and sanity check their data at some point.
+location: Koerner Library Room 216
+link: https://github.com/minisciencegirl/studyGroup/issues/185
+date: 2018-07-26
+startTime: '09:00'
+endTime: '10:00'
+---
