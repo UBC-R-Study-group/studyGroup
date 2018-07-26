@@ -75,4 +75,30 @@ ggplot(data = mpg, aes(class,hwy, colour = class, fill = class)) +
 #tell me which manufacturer has the highest mean hwy mileage 
 #(by plotting the mean and looking at your plot)
 
+#*********************************in class code***********************************
+library(ggplot2)
 
+data(mpg, package = "ggplot2")
+View(mpg)
+
+#basic ggplot
+ggplot(data =mpg, aes(x = cty, y = hwy, colour = class, alpha = 0.5)) +
+  geom_jitter() + facet_grid(rows = vars(cyl))
+
+#plot of class v.s highway milage, violin plot
+mpg$cyl = as.factor(mpg$cyl)
+ggplot(mpg, aes(class, hwy, colour = class, fill = class)) + geom_violin(alpha = 0.4) +
+  stat_summary( aes(label=round(..y..,2)),fun.y = "median", geom = "text", 
+                colour = "black", show.legend = FALSE,
+                vjust = -2) +stat_summary(fun.y = "median", geom = "point", colour = "black")+
+  theme_minimal() + theme(panel.background = element_rect(fill = "white"),
+                       axis.title = element_text(face = "bold")) + 
+  labs(x = "\nclass of car", y = "hwy milage\n")
+
+
+#exercise #2
+#tell me which manufacturer has the highest mean cty mileage
+#(by plotting the mean and looking at your plot)
+
+ggplot(mpg, aes(manufacturer, cty, colour = manufacturer)) + geom_boxplot() + 
+  stat_summary(fun.y = "mean", geom = "point", colour = "black")
