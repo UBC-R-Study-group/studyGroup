@@ -2,7 +2,7 @@
 title: Interactive plots in R!
 text: Come learn about how to use plotly in R to make interactive visualizations!
 location: Koerner Library Room 216
-link: https://github.com/minisciencegirl/studyGroup/issues/173
+link: https://github.com/minisciencegirl/studyGroup/issues/193
 date: 2018-08-30
 startTime: '09:00'
 endTime: '10:00'
