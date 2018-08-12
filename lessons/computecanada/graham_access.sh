@@ -51,6 +51,22 @@ Rscript --vanilla Amino_Acid_Select.R
 # Scratch space is only backed up for 6 months, but nothing there will be deleted without you being informed
 # and your memory allocation for it will be much larger, so it's a good place to keep in-progress files
 
+# Install R package globally from CRAN (actually works):
+
+module load gcc/5.4.0
+module load r/3.4.3
+
+R
+
+install.packages("package_name")
+
+# Should prompt you to choose which CRAN. Take your pick.
+# Not sure how to access these packages in your R script. 
+
+library("package_name") 
+
+# will ideally work.
+
 # Install R package locally
 # First scp tar.gz file to a good place in Cedar/Graham
 # From within that folder call:
@@ -60,3 +76,5 @@ module load r/3.4.3
 R
 
 install.packages("package_name", repos = NULL, lib = "/home/path/to/library" )
+
+
