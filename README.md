@@ -1,7 +1,7 @@
 Vancouver R Study Group
 =======================
 
-Welcome to the Vancouver R Study Group! Check out our [event listings on our website](http://minisciencegirl.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/minisciencegirl/studyGroup/issues).
+Welcome to the Vancouver R Study Group! We are a group of R/Python/(insert your favourite language) enthusiasts who love data. Check out our [event listings on our website](http://minisciencegirl.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/minisciencegirl/studyGroup/issues).
 
 ### Wait What's a 'Mozilla Study Group'?
 
