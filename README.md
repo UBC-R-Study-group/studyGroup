@@ -1,7 +1,7 @@
 Vancouver R Study Group
 =======================
 
-Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues).
+Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues).
 
 ## For Participants
 
