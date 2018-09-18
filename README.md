@@ -18,7 +18,7 @@ Welcome to our Mozilla Study Group! A few things to do & know now that you're he
 
 
 ```
-- name: their human name
+- name: your human name
   affiliation: school, lab, department, business....
   github: their GitHub handle
   interests:
