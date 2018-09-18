@@ -3,10 +3,6 @@ Vancouver R Study Group
 
 Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues).
 
-### Wait What's a 'Mozilla Study Group'?
-
-Mozilla Study Groups are fun, informal meetups of your friends and colleagues from around your local institution or town to share skills, stories and ideas on using code for research. The goal is to create a friendly, no-pressure environment where people can share their work, ask for help on a coding problem, and learn and work together with their peers.
-
 ## For Participants
 
 Welcome to our Mozilla Study Group! A few things to do & know now that you're here:
@@ -20,9 +16,13 @@ Welcome to our Mozilla Study Group! A few things to do & know now that you're he
 ```
 - name: your human name
   affiliation: school, lab, department, business....
-  github: their GitHub handle
+  github: your GitHub handle
   interests:
     - list one to three
     - different interests
 ```
 
+
+### Wait What's a 'Mozilla Study Group'?
+
+Mozilla Study Groups are fun, informal meetups of your friends and colleagues from around your local institution or town to share skills, stories and ideas on using code for research. The goal is to create a friendly, no-pressure environment where people can share their work, ask for help on a coding problem, and learn and work together with their peers.
