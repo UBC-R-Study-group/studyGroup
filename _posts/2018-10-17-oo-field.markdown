@@ -1,0 +1,9 @@
+---
+title: Object Oriented field guide in R
+text: Come learn about Object Oriented programming in R as we work through the Object Oriented field guide from *Advanced R*
+location: Koerner Library, UBC, Room 216 
+link: https://github.com/UBC-R-Study-group/studyGroup/issues/10
+date: 2018-10-17
+startTime: '13:00'
+endTime: '13:50'
+---
