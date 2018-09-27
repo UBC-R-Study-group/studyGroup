@@ -1,0 +1,9 @@
+---
+title: Shiny in R 
+text: Come learn about Shiny in R
+location: Koerner Library, UBC, Room 216
+link: https://github.com/UBC-R-Study-group/studyGroup/issues/15
+date: 2018-11-21
+startTime: '13:00'
+endTime: '13:50'
+---
