@@ -10,7 +10,7 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 
 | Date        | Topic                                             | Name            | GitHub username   |
 |-------------|---------------------------------------------------|-----------------|-------------------|
-| 2019-01-30  |                                                   |                 |                   |
+| 2019-01-30  | Work-a-long and Planning                          |                 |                   |
 | 2019-02-06  |                                                   |                 |                   |
 | 2019-02-13  |                                                   |                 |                   |
 | 2019-02-20  |                                                   |                 |                   |
