@@ -5,23 +5,27 @@ Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(inse
 
 ## Schedule
 
-Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, check the issue [#1](/../../issues/1). 
+Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, check the issue [#1](/../../issues/1).
 
 
-| Date             | Topic                                                                              | Name | GitHub username   |
-|-------------|---------------------------------------------------|-----------------|----------| 
-| 2018-09-19 | Chapter 3 Data visualisation (R for Data Science)   | Deirdre Loughnan |  DeirdreLoughnan |  
-| 2018-09-26 | Chapter: Functions (Advanced R)  | Arzan Irani  | nazra-inari   |
-| 2018-10-03  | Work-a-long or flex session |   |   |
-| 2018-10-10 | Chapter 5 Data transformation (R for Data Science)   | Allison Mann |  aemann01  |  
-| 2018-10-17  |  Chapter: OO field guide (Advanced R)  | Ian Flores | ian-flores         |
-| 2018-10-24  | Time series and Julia | Arnav Sood   | arnavs   |
-| 2018-10-31 | Chapter 7 Exploratory Data Analysis (R for Data Science)   | Aaron Quinton | aaronquinton |  
-| 2018-11-07 | Chapter: Data structures (Advanced R)  |  Milos Milic                 | milicmil         |
-| 2018-11-14 | Work-a-long or flex session |   |   | 
-| 2018-11-21 | Shiny in R   | Amin Adibi | aminadibi  |  
-| 2018-11-28 | R Markdown   | Tiffany Timbers                    | ttimbers    |
-| 2018-12-05 | Holiday social |   |   |
+| Date        | Topic                                             | Name            | GitHub username   |
+|-------------|---------------------------------------------------|-----------------|-------------------|
+| 2019-01-30  |                                                   |                 |                   |
+| 2019-02-06  |                                                   |                 |                   |
+| 2019-02-13  |                                                   |                 |                   |
+| 2019-02-20  |                                                   |                 |                   |
+| 2019-02-27  |                                                   |                 |                   |
+| 2019-03-06  |                                                   |                 |                   |
+| 2019-03-13  |                                                   |                 |                   |
+| 2019-03-20  |                                                   |                 |                   |
+| 2019-03-27  |                                                   |                 |                   |
+| 2019-04-03  |                                                   |                 |                   |
+| 2019-04-10  |                                                   |                 |                   |
+| 2019-04-17  |                                                   |                 |                   |
+| 2019-04-24  |                                                   |                 |                   |
+| 2019-05-01  |                                                   |                 |                   |
+| 2019-05-08  |                                                   |                 |                   |
+| 2019-05-15  |                                                   |                 |                   | 
 
 ## For Participants
 
