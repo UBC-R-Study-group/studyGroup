@@ -15,7 +15,7 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 | 2019-02-13  |                                                   |                 |                   |
 | 2019-02-20  |                                                   |                 |                   |
 | 2019-02-27  |                                                   |                 |                   |
-| 2019-03-06  |                                                   |                 |                   |
+| 2019-03-06  | Machine Learning in R                             | Ian Flores      | @ian-flores       |
 | 2019-03-13  |                                                   |                 |                   |
 | 2019-03-20  |                                                   |                 |                   |
 | 2019-03-27  |                                                   |                 |                   |
