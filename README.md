@@ -5,7 +5,7 @@ Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(inse
 
 ## Schedule
 
-Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, check the issue [#24](/../../issues/1).
+Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, check the issue [#24](/../../issues/24).
 
 
 | Date        | Topic                                             | Name            | GitHub username   |
