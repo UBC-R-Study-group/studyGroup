@@ -18,8 +18,8 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 | 2019-03-06  | Machine Learning in R                             | Ian Flores      | ian-flores        |
 | 2019-03-13  |                                                   |                 |                   |
 | 2019-03-20  | Non-Standard Evaluation in R                      | Amy Lee         | minisciencegirl   |
-| 2019-03-27  |                                                   |                 |                   |
-| 2019-04-03  |                                                   |                 |                   |
+| 2019-03-27  | R packages (group project 2)                      | Tiffany Timbers | ttimbers          |
+| 2019-04-03  | Julia                                             | Arnav Sood      | arnavs            |
 | 2019-04-10  |                                                   |                 |                   |
 | 2019-04-17  |                                                   |                 |                   |
 | 2019-04-24  |                                                   |                 |                   |
