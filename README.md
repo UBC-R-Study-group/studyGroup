@@ -15,8 +15,8 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 | 2019-02-13  | Workshop Planning                                 |                 |                   |
 | 2019-02-20  | Intro Plotting (`gg`, scatter, histograms, etc.)  | Richie Zitomer  | rzitomer          |
 | 2019-02-27  | Work-a-long                                       |                 |                   |
-| 2019-03-06  | Exploratory Data Analysis                         | Aaron Quintin   | aaronquinton      |
-| 2019-03-13  | Work-a-long                                       |                 |                   |
+| 2019-03-06  | Work-a-long, workshop planning                    |                 |                   |
+| 2019-03-13  | Exploratory Data Analysis                         | Aaron Quintin   | aaronquinton      |
 | 2019-03-20  | Machine Learning in R                             | Ian Flores      | ian-flores        |
 | 2019-03-27  | Work-a-long                                       |                 |                   |
 | 2019-04-03  | The Julia Programming Language                    | Arnav Sood      | arnavs            |
