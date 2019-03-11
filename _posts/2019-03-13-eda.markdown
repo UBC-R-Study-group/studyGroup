@@ -1,0 +1,9 @@
+---
+title: Exploratory Data Analysis
+text: Come join us as we work our way through an example data set.
+location: Koerner Library, UBC, Room 216
+link: https://github.com/UBC-R-Study-group/studyGroup/issues/35
+date: 2019-03-13
+startTime: '13:00'
+endTime: '13:50'
+---
