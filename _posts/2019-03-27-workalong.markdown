@@ -1,6 +1,6 @@
 ---
 title: Work-a-Long
-text: Work-a-long session: Bring your R, python, Julia, etc. questions or projects!
+text: Work-a-long session, bring your R, python, Julia, etc. questions or projects
 location: Koerner Library, UBC, Room 216
 link: https://github.com/UBC-R-Study-group/studyGroup/issues/37
 date: 2019-03-27
