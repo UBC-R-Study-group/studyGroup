@@ -1,0 +1,9 @@
+---
+title: The Julia Programming Language
+text: Come by for an intro to the Julia language
+location: Koerner Library, UBC, Room 216
+link: https://github.com/UBC-R-Study-group/studyGroup/issues/38
+date: 2019-04-03
+startTime: '13:00'
+endTime: '13:50'
+---
