@@ -21,7 +21,7 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 | 2019-03-27  | Work-a-long                                       |                 |                   |
 | 2019-04-03  | The Julia Programming Language                    | Arnav Sood      | arnavs            |
 | 2019-04-10  | Work-a-long                                       |                 |                   |
-| 2019-04-17  | `purr`                                            | Travis Blimkie  | travis-m-blimkie  |
+| 2019-04-17  | Iteration and `purrr::map()`                      | Travis Blimkie  | travis-m-blimkie  |
 | 2019-04-24  | Work-a-long                                       |                 |                   |
 | 2019-05-01  | Non-Standard Evaluation in R                      | Amy Lee         | minisciencegirl   |
 | 2019-05-08  | Group Project Presentations/Party                 |                 |                   |
