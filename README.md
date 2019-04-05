@@ -23,8 +23,8 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 | 2019-04-10  | Work-a-long                                       |                 |                   |
 | 2019-04-17  | Iteration and `purrr::map()`                      | Travis Blimkie  | travis-m-blimkie  |
 | 2019-04-24  | Work-a-long                                       |                 |                   |
-| 2019-05-01  | Non-Standard Evaluation in R                      | Amy Lee         | minisciencegirl   |
-| 2019-05-08  | Group Project Presentations/Party                 |                 |                   |
+| 2019-05-01  | Work-a-long                                       |                 |                   |
+| 2019-05-08  | Non-Standard Evaluation in R                      | Amy Lee         | minisciencegirl   |
 | 2019-05-15  | End-of-year Party                                 |                 |                   | 
 
 ## For Participants
