@@ -1,0 +1,9 @@
+---
+title: Non-Standard Evaluation in R
+text: Join us for an NSE tutorial!
+location: Koerner Library, UBC, Room 216
+link: https://github.com/UBC-R-Study-group/studyGroup/issues/42
+date: 2019-05-08
+startTime: '13:00'
+endTime: '13:50'
+---
