@@ -11,10 +11,10 @@ practice_list <- list(a = 9,
 
 # Load in gene data
 treatment1 <- read.csv(
-  "")
+  "https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20190417_map/genes_treatment1_vs_ctrl.csv")
 
 treatment2 <- read.csv(
-  "")
+  "https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20190417_map/genes_treatment2_vs_ctrl.csv")
 
 # Put both data frames into a list
 treatment_list <- list(treat1 = treatment1,
