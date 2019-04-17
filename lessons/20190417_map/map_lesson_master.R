@@ -175,7 +175,7 @@ new_df_list <- map(ex_df_list, function(x) {
 # Demonstration:
 # Example of file reading with map() and list.files()
 my_treatments <- list("treatment1", "treatment2")
-my_path <- "/cygwin64/home/Laptop/mybin/misc_files/MyData"
+my_path <- "/path/to/data"
 
 my_files <- my_treatments %>%
   map(~list.files(path = my_path,
