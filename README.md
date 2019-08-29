@@ -11,7 +11,7 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 |Date       |Event                                                               |Lead (Github Username)                              |
 |-----------|--------------------------------------------------------------------|-----------------------------------|
 |2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
-|2019 Sep 27| [PAID] R Beginner Workshop                                         | laijasmine, arnavs, travis-m-blimkie|
+|2019 Sep 27| [PAID] [R Beginner Workshop](https://www.eventbrite.ca/e/r-beginner-workshop-tickets-68936650377)                                         | laijasmine, arnavs, travis-m-blimkie|
 |2019 Oct 2 | Alternate Plotting Libraries (plotly, cowplot, etc.)| laijasmine                        |
 |2019 Oct 9 | workalong                                                          |                                   |
 |2019 Oct 16| Git/ Version control                                               | arnavs                            |
