@@ -5,6 +5,8 @@ Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(inse
 
 ## Schedule
 
+Come join us on Wednesdays 1-2pm at Koerner Library Room 216
+
 Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
 ### TERM 1
