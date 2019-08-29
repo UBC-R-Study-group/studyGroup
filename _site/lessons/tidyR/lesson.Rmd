@@ -1,0 +1,249 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Outline
+
+1. [Why Tidy?](#why-tidy)
+2. [How to Tidy](#how-to-tidy)
+    - Challenge Question 1
+    - Challenge Question 2
+3. [Other useful functions from tidyr](#other-useful-functions-from-tidyr): Separate and Unite
+    - Challenge Question 3
+4. [Final Example](#final-example): See how Kate used tidyr last week!
+5. [Further Reading](#further-reading)
+6. [Solutions](#solutions) for Challenge Questions
+
+## Why Tidy?
+
+###Tidy Data and Data Analysis Pipeline
+
+![Data Analysis Pipeline, Joseph V. Casillas.](DataAnalysis.png)
+
+
+
+> It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data. (Dasu and Johnson, 2003)
+
+
+### What is tidy data?
+* every column in your dataframe represents a variable
+* every row represents an observation
+* also known as long format
+
+
+### Why do we need tidy data?
+* consistent data structure - easier to manipulate
+* preferred format for `dplyr` and `ggplot2`
+
+> If you are struggling to make a figure, for example, stop and think hard about whether your data is tidy. Untidiness is a common, often overlooked cause of agony in data analysis and visualization. (Jenny Bryan, STAT545)
+
+
+### Example of untidy data (Jenny Bryan, STAT545)
+![Untidy data, Jenny Bryan.](untidy_lotr.png)
+
+### Example of *tidy* data
+![Tidy data, Jenny Bryan.](tidy_lotr.PNG)
+
+
+### Consider the differences...
+* What are the variables and observations?
+* What makes the first set tidy while the second is untidy?
+* Which is easier on the eyes?
+* How would you figure out:
+    - What's the total number of words spoken by male hobbits in all three movies?
+    - Is there a more talkative `Race`? 
+
+Using a previously saved tidied dataset, we can see it is very easy to manipulate the tidy version:
+
+```{r}
+library(tidyverse)
+lotr_tidy_pre <- read_csv("lotr_tidy.csv") 
+
+lotr_tidy_pre %>% 
+  count(Gender, Race, wt = Words)
+
+lotr_tidy_pre %>%
+  group_by(Race) %>%
+  summarize(Words = sum(Words))
+```
+
+Note: for explanations of the `%>%`, `count`, `group_by`, or `summarize` operations, see Jenny Bryan's dplyr material:  [part 1 with the pipe](http://stat545.com/block009_dplyr-intro.html) and [part 2 dplyr functions](http://stat545.com/block010_dplyr-end-single-table.html).
+
+## How to Tidy
+
+### How do we turn the LotR tables into a tidy dataframe?
+
+Let's read these dataframes in:
+
+```{r}
+fship <- read_csv("The_Fellowship_Of_The_Ring.csv")
+
+ttow <- read_csv("The_Two_Towers.csv")
+
+rking <- read_csv("The_Return_Of_The_King.csv")
+
+fship #look at one untidy dataframe
+```
+
+
+Collect untidy dataframes into one dataframe:
+
+```{r}
+(lotr_untidy <- dplyr::bind_rows(fship, ttow, rking))
+```
+
+This dataframe is still untidy because "word count" is spread out between two columns, `Male` and `Female`. So to make this dataframe tidy, we need to:
+
+- `gather()` up the word counts into one column
+- create a new column for `Gender`
+
+Time to make this dataframe tidy!
+
+```{r}
+(lotr_tidy <-
+  gather(lotr_untidy, key = 'Gender', value = 'Words', Female, Male))
+```
+
+### Challenge Question 1
+
+Sometimes you want a wide or untidy dataset - for example, making a table for human eyes. `spread()` is another tidyr function that converts a dataframe from the long format to the wide format. How would you convert the `lotr_tidy` dataframe back into the `lotr_untidy` dataframe?
+
+
+### Challenge Question 2
+
+In the EDAWR dataset, `cases`, we have the number of tuberculosis cases reported in France, Germany and United States from 2011 to 2013. What are the total number of tuberculosis cases reported over three years for each country?
+
+```{r}
+#devtools::install_github("rstudio/EDAWR")
+library(EDAWR)
+cases
+```
+
+
+## Other useful functions from tidyr
+
+###Separate and Unite
+
+Let's use the EDAWR dataset again. This time, we are going to use the `storms` data, which has the maximum wind speeds for six Atlantic hurricanes. 
+
+```{r}
+storms
+```
+
+`separate()` allows you to separate a column into multiple other columns by using a separator. For example, if we want to separate the `date` column into `year`, `month`, `day`, we can do that by:
+
+```{r}
+storms.sep <- separate(storms, date, c("year", "month", "day"), sep = "-")
+```
+
+### Challenge Question 3
+
+How do you combine the three separate columns, `year`, `month`, `day`, that you just created in `storms.sep` back into one column, `date`? Hint: `unite()` works the opposite way as `separate()`.
+
+## Final Example
+
+A piece of code I actually used in the last week to make a quick comparison. I was looking at the number of biological pathways that were altered by infection by either Salmonella or Chlamydia, in two cell types. I wanted to see whether the number of shared pathways vs those unique to either cell type were similar for the different infections. Since there were different numbers of total pathways changed, I also wanted to see if the percentage of shared vs unique pathways were similar. I was starting from an untidy data set, without percentages. I'm going to show the code broken up step by step, and then a neater version without breaks to print intermediate steps.
+
+First I read in the untidy data frame, and tidy it by gathering.
+
+```{r}
+library(tidyverse)
+
+(paths <- read_csv("example.csv")) #read untidy data frame
+
+#First I tidy the data frame by gathering
+(paths_tidy <- paths %>%
+  gather(key = "Overlap", value = "Number", Shared:CellType2))
+```
+
+Now, in order to calculate the percent, I use `group_by` and `mutate` to make a column containing the total number of pathways for each type of infection, then use that Total to calculate percents.
+
+```{r}
+(paths_calc <- paths_tidy %>%
+  group_by(Infection) %>%
+  mutate(Total = sum(Number),
+         Percent = 100*Number/Total) )
+```
+
+I could make two different plots with Number and Percent here. However, I want to display Number and Percent in two panels of the same plot, so I'm actually going to gather this again. (Note - this is a bit of a quick and dirty way to display side by side graphs.)
+
+```{r}
+(paths_calc <- paths_calc %>%
+  gather(key = "Type", value = "Value", Number, Percent) )
+
+paths_calc %>%
+  ggplot(aes(x = Overlap, 
+             y = Value,
+             fill = Infection)) +
+    geom_bar(stat="identity", 
+           position = "dodge") + #places filled columns next to each other
+    facet_wrap(~Type, scales = "free") #gives me panels using different scales
+```
+
+So I see that more pathways changed in the Chlamydia infection, but there are a higher percentage of shared pathways in the Salmonella infection.
+
+The simplified code looks like this:
+
+```{r}
+read_csv("example.csv") %>%
+  gather(key = "Overlap", value = "Number", Shared:CellType2) %>%
+  group_by(Infection) %>%
+  mutate(Total = sum(Number),
+         Percent = 100*Number/Total) %>% 
+  gather(key = "Type", value = "Value", Number, Percent) %>%
+  ggplot(aes(x = Overlap, 
+             y = Value,
+             fill = Infection)) +
+    geom_bar(stat="identity", position = "dodge") +
+    facet_wrap(~Type, scales = "free")
+```
+
+
+## Further Reading
+
+#### More tutorials
+
+Further examples and more in-depth coverage.
+
+* Jenny Bryan's [LOTR GitHub Repo](https://github.com/jennybc/lotr-tidy), with the Lord of the Rings dataset.
+* [wmhall's tutorial](https://github.com/wmhall/tidyr_lesson/blob/master/tidyr_lesson.md)
+* [Hadley Wickham's R for Data Science Textbook](http://r4ds.had.co.nz/tidy-data.html) and [journal article](http://vita.had.co.nz/papers/tidy-data.pdf) on tidy data.
+
+#### Reshape2
+
+Another package available, covering a wider array of data reshaping tools than tidyr. In reshape2
+
+* `melt` performs the function of `gather`
+* `cast` performs the function of `spread`
+
+
+## Solutions
+
+#### Challenge 1
+
+How would you convert the `lotr_tidy` dataframe back into the `lotr_untidy` dataframe?
+
+```{r}
+spread(lotr_tidy, key="Gender", value="Words")
+```
+
+#### Challenge 2
+
+In the EDAWR dataset, `cases`, we have the number of tuberculosis cases reported in France, Germany and United States from 2011 to 2013. What are the total number of tuberculosis cases reported over three years for each country?
+
+```{r}
+cases %>%
+  gather(key = "year", value = "cases", `2011`, `2012`, `2013`) %>%
+  group_by(country) %>%
+  summarize(cases = sum(cases))
+
+# Note: alternatively we could use gather(key="year", value="cases", `2011`:`2013`) to refer to all columns from 2011 to 2013, or (key="year", value="cases", -country) to gather all columns other than the country
+```
+
+### Challenge 3
+
+How do you combine the three separate columns, `year`, `month`, `day`, that you just created in `storms.sep` back into one column, `date`? Hint: `unite()` works the opposite way as `separate()`.
+
+```{r}
+unite(storms.sep, date, c("year", "month", "day"), sep = "-")
+```
