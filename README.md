@@ -22,6 +22,7 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 |2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
 |2019 Nov 27| Last Study Group Meet up for the Year                              |                                   |
 
+=======
 
 ## For Participants
 
