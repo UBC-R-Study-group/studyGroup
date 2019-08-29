@@ -5,27 +5,23 @@ Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(inse
 
 ## Schedule
 
-Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, check the issue [#24](/../../issues/24).
+Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
+### TERM 1
+|Date       |Event                                                               |Lead (Github Username)                              |
+|-----------|--------------------------------------------------------------------|-----------------------------------|
+|2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
+|2019 Sep 27| [PAID] R Beginner Workshop                                         | laijasmine, arnavs, travis-m-blimkie|
+|2019 Oct 2 | Alternate Plotting Libraries (plotly, cowplot, etc.)| laijasmine                        |
+|2019 Oct 9 | workalong                                                          |                                   |
+|2019 Oct 16| Git/ Version control                                               | arnavs                            |
+|2019 Oct 23| Workalong                                                          |                                   |
+|2019 Oct 30| Functions                                                          | TBA                               |
+|2019 Nov 6 | Workalong                                                          |                                   |
+|2019 Nov 13| Purrr                                                              | travis-m-blimkie                  |
+|2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
+|2019 Nov 27| Last Study Group Meet up for the Year                              |                                   |
 
-| Date        | Topic                                             | Name            | GitHub username   |
-|-------------|---------------------------------------------------|-----------------|-------------------|
-| 2019-01-30  | Work-a-long and Planning                          |                 |                   |
-| 2019-02-06  | Workshop Planning                                 |                 |                   |
-| 2019-02-13  | Workshop Planning                                 |                 |                   |
-| 2019-02-20  | Intro Plotting (`gg`, scatter, histograms, etc.)  | Richie Zitomer  | rzitomer          |
-| 2019-02-27  | Work-a-long                                       |                 |                   |
-| 2019-03-06  | Work-a-long, workshop planning                    |                 |                   |
-| 2019-03-13  | Exploratory Data Analysis                         | Aaron Quintin   | aaronquinton      |
-| 2019-03-20  | Machine Learning in R                             | Ian Flores      | ian-flores        |
-| 2019-03-27  | Work-a-long                                       |                 |                   |
-| 2019-04-03  | The Julia Programming Language                    | Arnav Sood      | arnavs            |
-| 2019-04-10  | Work-a-long                                       |                 |                   |
-| 2019-04-17  | Iteration and `purrr::map()`                      | Travis Blimkie  | travis-m-blimkie  |
-| 2019-04-24  | Work-a-long                                       |                 |                   |
-| 2019-05-01  | Work-a-long                                       |                 |                   |
-| 2019-05-08  | Non-Standard Evaluation in R                      | Amy Lee         | minisciencegirl   |
-| 2019-05-15  | End-of-year Party                                 |                 |                   | 
 
 ## For Participants
 
