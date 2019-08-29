@@ -5,9 +5,24 @@ Welcome to the Vancouver R Study Group! We are a group of **R/Python/Julia/(inse
 
 ## Schedule
 
-Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, check the issue [#24](/../../issues/24).
+Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
-Thank you for participating this term! Stay tuned for things to come in September as we restart this R session for the Fall!
+### TERM 1
+|Date       |Event                                                               |Lead (Github Username)                              |
+|-----------|--------------------------------------------------------------------|-----------------------------------|
+|2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
+|2019 Sep 27| [PAID] R Beginner Workshop                                         | laijasmine, arnavs, travis-m-blimkie|
+|2019 Oct 2 | Alternate Plotting Libraries (plotly, cowplot, etc.)| laijasmine                        |
+|2019 Oct 9 | workalong                                                          |                                   |
+|2019 Oct 16| Git/ Version control                                               | arnavs                            |
+|2019 Oct 23| Workalong                                                          |                                   |
+|2019 Oct 30| Functions                                                          | TBA                               |
+|2019 Nov 6 | Workalong                                                          |                                   |
+|2019 Nov 13| Purrr                                                              | travis-m-blimkie                  |
+|2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
+|2019 Nov 27| Last Study Group Meet up for the Year                              |                                   |
+
+=======
 
 ## For Participants
 

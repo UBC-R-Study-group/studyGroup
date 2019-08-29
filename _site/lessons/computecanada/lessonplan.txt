@@ -1,0 +1,3 @@
+## We will be learning how to access CC servers, load files there, use slurm scripts to run R code 
+## (or request nodes for quick interactive useage) and install packages locally. Also some of the 
+## "good practices" for computing clusters and how they can be helpful.

@@ -1,71 +1,17 @@
-- name: Erica Acton
-  affiliation: University of British Columbia
-  github: eacton
+- name: Jasmine Lai (co-organizer)
+  affiliation: UBC - Beaty Biodiversity Museum
+  github: laijasmine
   interests:
-    - Genomics
-    - Bioinformatics
-
-- name: Joey Bernhardt
-  affiliation: University of British Columbia
-  github: joeybernhardt
+    - Biology (Plants & Seaweeds)
+    - Data cleaning
+    - Teaching
+    
+- name: Travis Blimkie (co-organizer)
+  affiliation: UBC
+  github: travis-m-blimkie
   interests:
-    - Ecology
 
-- name: Fong Chun Chan
-  affiliation: British Columbia Cancer Research Center & University of British Columbia
-  github: tinyheero
+- name: Arnav Sood (co-organizer)
+  affiliation: UBC
+  github: arnavs
   interests:
-    - Data Science
-    - Genomics
-    - Cancer Research
-    - Bioinformatics
-
-- name: Giulio Valentino Dalla Riva
-  affiliation: University of British Columbia
-  github: gvdr
-  interests:
-    - Ecology
-    - Evolution
-    - Mathematics
-
-- name: Alyssa F
-  affiliation: University of British Columbia
-  github: alyeffy
-  interests:
-    - Data Science
-    - Bioinformatics
-
-
-- name: Simon Goring
-  affiliation: University of Wisconsin-Madison
-  github: SimonGoring
-  interests:
-    - Ecology
-    - Earth Sciences
-    - Paleoecology
-    - Fun times with R
-    - Long walks on the beach
-
-- name: Amy Lee
-  affiliation: University of British Columbia
-  github: minisciencegirl
-  interests:
-    - Genomics
-    - Microbial pathogens
-    - Open Science
-    - R
-
-- name: Bill Mills
-  affiliation: Mozilla Science Lab
-  github: BillMills
-  interests:
-    - Programming
-    - Open Science
-
-- name: Jeff Stafford
-  affiliation: University of British Columbia
-  github: kazi11
-  interests:
-    - Genomics
-    - Image Analysis
-    - Bioinformatics
