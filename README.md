@@ -8,7 +8,7 @@ Are you interested in learning R, but don't know where to start? In this worksho
 
 ## Schedule
 
-Come join us on Wednesdays 1-2pm at Koerner Library Room 216
+Come join us on Wednesdays 1-2pm at Koerner Library Room 548/552
 
 Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
