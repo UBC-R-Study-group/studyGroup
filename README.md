@@ -12,6 +12,8 @@ Come join us on Wednesdays 1-2pm at Koerner Library Room 548/552
 
 Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
+**We are already looking for people to lead our sessions! Drop us a line at ubcrstudygroup@gmail.com or come to one of our sessions to connect. 
+
 ### TERM 1
 |Date       |Event                                                               |Lead (Github Username)                              |
 |-----------|--------------------------------------------------------------------|-----------------------------------|
