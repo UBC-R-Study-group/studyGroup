@@ -1,17 +1,18 @@
 UBC R Study Group
 =======================
 
-Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues).
+Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues). Our regular Wednesday sessions are totally open; no sign-up, registration or fee is required to attend. 
 
 ## Schedule
-
-Come join us on **Wednesdays 1-2pm at Koerner Library Room 548/552**
+Come join us on **Wednesdays 1-2pm at Koerner Library Room 548/552.**
 
 Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
-**We are already looking for people to lead our sessions! Drop us a line at ubcrstudygroup@gmail.com or come to one of our sessions to connect. 
+We will also be continuing the study group come the new year; our Winter 2020 schedule will be posted here. 
 
-### TERM 1
+**We are already looking for people to lead our sessions!** Drop us a line at ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are interested in teaching one of the lessons.
+
+### TERM 1 - Fall 2019
 |Date       |Event                                                               |Lead (Github Username)                              |
 |-----------|--------------------------------------------------------------------|-----------------------------------|
 |2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
@@ -26,10 +27,11 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 |2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
 |2019 Nov 27| Last Study Group Meet up for the Year                              |                                   |
 
-=======
+
+## What's a Work-A-Long session?
+These sessions are meant as an opportunity for you to come and ask questions or get help with a programming problem. Bring your code or data and get adive or tips, and chat with your fellow peers. Just like or other sessions, these are totally open, no registration needed. 
 
 ## For Participants
-
 Welcome to our Mozilla Study Group! A few things to do & know now that you're here:
 
  - **Watch this repo:** up in the top right, there's a button that says 'Watch'; click it, and set yourself to 'Watching'. This will send you email notifications of new discussions; if you don't want email, but would like an alert just on GitHub, change the setting in Settings -> Notification Center (Settings is the little cog in the top right).
