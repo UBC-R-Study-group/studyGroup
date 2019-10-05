@@ -21,7 +21,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |2019 Oct 9 | Workalong                                                          |                                   |
 |2019 Oct 16| Git/ Version control                                               | arnavs                            |
 |2019 Oct 23| Workalong                                                          |                                   |
-|2019 Oct 30| Functions                                                          | laijasmine                               |
+|2019 Oct 30| Functions                                                          | laijasmine                        |
 |2019 Nov 6 | Workalong                                                          |                                   |
 |2019 Nov 13| purrr's map and working with lists                                 | travis-m-blimkie                  |
 |2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
@@ -29,7 +29,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 
 
 ## What's a Work-A-Long session?
-These sessions are meant as an opportunity for you to come and ask questions or get help with a programming problem. Bring your code or data and get adive or tips, and chat with your fellow peers. Just like or other sessions, these are totally open, no registration needed. 
+These sessions are meant as an opportunity for you to come and ask questions or get help with a programming problem. Bring your code or data and get adive or tips, and chat with your fellow peers. Just like our other sessions, these are totally open, no registration needed. 
 
 ## For Participants
 Welcome to our Mozilla Study Group! A few things to do & know now that you're here:
