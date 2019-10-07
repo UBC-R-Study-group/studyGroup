@@ -1,7 +1,7 @@
 UBC R Study Group
 =======================
 
-Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues). Our regular Wednesday sessions are totally open; no sign-up, registration or fee is required to attend. 
+Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert your favourite language)** enthusiasts who love data. We are an inclusive group and welcome everyone. Check out our [event listings on our website](http://ubc-r-study-group.github.io/studyGroup/), or join the conversation on our [message board](https://github.com/ubc-r-study-group/studyGroup/issues). Our regular Wednesday sessions are totally open; no sign-up, registration, or fee is required to attend. 
 
 ## Schedule
 Come join us on **Wednesdays 1-2pm at Koerner Library Room 548/552.**
