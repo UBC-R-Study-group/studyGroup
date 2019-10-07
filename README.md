@@ -29,7 +29,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 
 
 ## What's a Work-A-Long session?
-These sessions are meant as an opportunity for you to come and ask questions or get help with a programming problem. Bring your code or data and get adive or tips, and chat with your fellow peers. Just like our other sessions, these are totally open, no registration needed. 
+These sessions are meant as an opportunity for you to come and ask questions or get help with a programming problem. Bring your code or data, get advice or tips, and chat with your fellow peers. Just like our other sessions, these are totally open, no registration needed. 
 
 ## For Participants
 Welcome to our Mozilla Study Group! A few things to do & know now that you're here:
