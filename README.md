@@ -18,11 +18,11 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
 |2019 Oct 2 | Alternate Plotting Libraries (plotly, cowplot, etc.)               | travis-m-blimkie                    |
 |2019 Oct 4 | [PAID] [R Beginner Workshop](https://www.eventbrite.ca/e/r-beginner-workshop-tickets-68936650377)                                         | laijasmine, arnavs, travis-m-blimkie|
-|2019 Oct 9 | Workalong                                                          |                                   |
+|2019 Oct 9 | Work-A-Long                                                        |                                   |
 |2019 Oct 16| Git/ Version control                                               | arnavs                            |
-|2019 Oct 23| Workalong                                                          |                                   |
+|2019 Oct 23| Work-A-Long                                                        |                                   |
 |2019 Oct 30| Functions                                                          | laijasmine                        |
-|2019 Nov 6 | Workalong                                                          |                                   |
+|2019 Nov 6 | Work-A-Long                                                        |                                   |
 |2019 Nov 13| purrr's map and working with lists                                 | travis-m-blimkie                  |
 |2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
 |2019 Nov 27| Last Study Group Meet up for the Year                              |                                   |
