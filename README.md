@@ -23,7 +23,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |2019 Oct 23| Work-A-Long                                                        |                                   |
 |2019 Oct 30| Functions                                                          | laijasmine                        |
 |2019 Nov 6 | Work-A-Long                                                        |                                   |
-|2019 Nov 13| purrr's map and working with lists                                 | travis-m-blimkie                  |
+|2019 Nov 13| Iteration in R                                                     | travis-m-blimkie                  |
 |2019 Nov 20| RMarkdown or Julia                                                 | arnavs                            |
 |2019 Nov 27| Last Study Group Meet up for the Year                              |                                   |
 
