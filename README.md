@@ -25,7 +25,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |2019 Nov 6 | Work-A-Long                                                        |                                   |
 |2019 Nov 13| Iteration in R                                                     | travis-m-blimkie                  |
 |2019 Nov 20| Julia                                                              | arnavs                            |
-|~2019 Nov 27~| ~Last Study Group Meet up for the Year~                          | (probably cancelled due to transit strike)                                |
+|~2019 Nov 27~| ~Last Study Group Meet up for the Year~                          | (**cancelled** due to transit strike)                                |
 
 
 ## What's a Work-A-Long session?
