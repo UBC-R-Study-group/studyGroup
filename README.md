@@ -29,7 +29,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |-----------|--------------------------------------------------------------------|-----------------------------------|
 |2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
 |2019 Oct 2 | Alternate Plotting Libraries (plotly, cowplot, etc.)               | travis-m-blimkie                    |
-|2019 Oct 4 | [PAID] [R Beginner Workshop]()                                     | laijasmine, arnavs, travis-m-blimkie|
+|2019 Oct 4 | [PAID] [R Beginner Workshop](https://github.com/UBC-R-Study-group/introRworkshop_Sept19)                                     | laijasmine, arnavs, travis-m-blimkie|
 |2019 Oct 9 | Work-A-Long                                                        |                                   |
 |2019 Oct 16| Git/ Version control                                               | arnavs                            |
 |2019 Oct 23| Work-A-Long                                                        |                                   |
