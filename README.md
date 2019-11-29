@@ -11,6 +11,18 @@ Here's our tentative schedule for the semester. This might not be the most up-to
 We will also be continuing the study group come the new year; our Winter 2020 schedule will be posted here. 
 
 **We are already looking for people to lead our sessions!** Drop us a line at ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are interested in teaching one of the lessons.
+### Tentative TERM 2 2020
+|Date       |Event                                               |Lead       |
+|-----------|----------------------------------------------------|-----------|
+|2020 Jan 15|Welcome back! & Intro to Rmarkdown                  | laijasmine travis-m-blimkie arnavs|
+|2020 Jan 22|Workalong                                           |           |
+|2020 Jan 29|Stringr - manipulating text data                    | TBA       |
+|2020 Feb 5 |Sharing things learned from rstudio::conf           | laijasmine|
+|2020 Feb 12|Introduction to “Tidy Tuesday”                      | TBA       |
+|2020 Feb 19|READING WEEK - NO MEET UP                           |           |
+|2020 Feb 26|Workalong                                           | TBA       |
+|2020 Mar 4 | Introduction to mapping using web maps with Leaflet| laijasmine|
+|2020 Mar 11|Workalong                                           | TBA       |
 
 ### TERM 1 - Fall 2019
 |Date       |Event                                                               |Lead (Github Username)                              |
