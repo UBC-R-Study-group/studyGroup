@@ -6,38 +6,27 @@ Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert you
 ## Schedule
 Come join us on **Wednesdays 1-2pm at Koerner Library Room 548/552.**
 
-Here's our tentative schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
+Here's our *tentative* schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
 
 We will also be continuing the study group come the new year; our Winter 2020 schedule will be posted here. 
 
 **We are already looking for people to lead our sessions!** Drop us a line at ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are interested in teaching one of the lessons.
-### Tentative TERM 2 2020
-|Date       |Event                                               |Lead       |
-|-----------|----------------------------------------------------|-----------|
-|2020 Jan 15|Welcome back! & Intro to Rmarkdown                  | laijasmine travis-m-blimkie arnavs|
-|2020 Jan 22|Workalong                                           |           |
-|2020 Jan 29|Stringr - manipulating text data                    | TBA       |
-|2020 Feb 5 |Sharing things learned from rstudio::conf           | laijasmine|
-|2020 Feb 12|Introduction to “Tidy Tuesday”                      | TBA       |
-|2020 Feb 19|READING WEEK - NO MEET UP                           |           |
-|2020 Feb 26|Workalong                                           | TBA       |
-|2020 Mar 4 | Introduction to mapping using web maps with Leaflet| laijasmine|
-|2020 Mar 11|Workalong                                           | TBA       |
-
-### TERM 1 - Fall 2019
-|Date       |Event                                                               |Lead (Github Username)                              |
-|-----------|--------------------------------------------------------------------|-----------------------------------|
-|2019 Sep 18| R Study Group Kick-off                                             | laijasmine, arnavs, travis-m-blimkie|
-|2019 Oct 2 | Alternate Plotting Libraries (plotly, cowplot, etc.)               | travis-m-blimkie                    |
-|2019 Oct 4 | [PAID] [R Beginner Workshop](https://github.com/UBC-R-Study-group/introRworkshop_Sept19)                                     | laijasmine, arnavs, travis-m-blimkie|
-|2019 Oct 9 | Work-A-Long                                                        |                                   |
-|2019 Oct 16| Git/ Version control                                               | arnavs                            |
-|2019 Oct 23| Work-A-Long                                                        |                                   |
-|2019 Oct 30| Functions                                                          | laijasmine                        |
-|2019 Nov 6 | Work-A-Long                                                        |                                   |
-|2019 Nov 13| Iteration in R                                                     | travis-m-blimkie                  |
-|2019 Nov 20| Julia                                                              | arnavs                            |
-|~2019 Nov 27~| ~Last Study Group Meet up for the Year~                          | (**cancelled** due to transit strike)                                |
+### TERM 2 - Winter 2020 (TENTATIVE)
+| Date      | Event                                               | Lead      |
+|-----------|-----------------------------------------------------|-----------|
+|2020 Jan 15| Welcome back! & Intro to Rmarkdown                  | laijasmine travis-m-blimkie arnavs|
+|2020 Jan 22| Workalong                                           |           |
+|2020 Jan 29| Stringr - manipulating text data                    | TBA       |
+|2020 Feb 5 | Sharing things learned from rstudio::conf           | laijasmine|
+|2020 Feb 12| Introduction to “Tidy Tuesday”                      | TBA       |
+|2020 Feb 19| READING WEEK - NO MEET UP                           |           |
+|2020 Feb 26| Workalong                                           | TBA       |
+|2020 Mar 4 | Introduction to mapping with Leaflet                | laijasmine|
+|2020 Mar 11| Workalong                                           |           |
+|2020 Mar 18| Tidy Tuesday                                        | TBA       |
+|2020 Mar 25| Workalong                                           |           |
+|2020 Apr 1 | Into to R Package Development                       | travis-m-blimkie |       |
+|2020 Apr 8 | End-of-Term Session                                 |           |
 
 
 ## What's a Work-A-Long session?
