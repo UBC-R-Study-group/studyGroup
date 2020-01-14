@@ -22,11 +22,11 @@
     - Julia language
     - Teaching
 
--name: Abhinav Checkervarty (PhD student)
- affiliation: Department of Experimental Medicine, UBC
- gituhub: abhi8138
- intersts:
-    -Bioinformatics
-    -Machine learning 
-    -Software/tool development
+- name: Abhinav Checkervarty (PhD student)
+  affiliation: UBC - Department of Experimental Medicine
+  gituhub: abhi8138
+  intersts:
+    - Bioinformatics
+    - Machine learning 
+    - Software and tool development
     
