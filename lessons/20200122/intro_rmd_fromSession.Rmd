@@ -1,0 +1,106 @@
+---
+title: "RMarkdown Introduction"
+author: "Travis Blimkie"
+date: "22/01/2020"
+output: 
+  html_document:
+    theme: flatly
+    highlight: kate
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Overview
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** *button* a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+## Adding code chunk
+
+```{r}
+library(tidyverse)
+library(knitr)
+
+data("mtcars")
+
+dim(mtcars)
+
+glimpse(mtcars)
+```
+
+
+## Holding results
+```{r, results = "hold"}
+```
+
+
+```{r, results = "hold"}
+data("mtcars")
+
+dim(mtcars)
+
+glimpse(mtcars)
+```
+
+
+## Making a nice table
+```{r}
+mtcars %>% 
+  filter(mpg > 20) %>% 
+  rownames_to_column("car") %>% 
+  kable()
+```
+
+
+# Making a plot
+
+```{r, fig.align = "center", fig.height = 3, fig.width = 4}
+ggplot(mtcars, aes(cyl, mpg)) +
+  geom_col() +
+  scale_x_continuous(breaks = c(4, 6, 8)) +
+  labs(x = "No. Cylinders", y = "Miles per Gallon") +
+  theme_classic()
+```
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+## Insert links and images
+
+to insert a link:
+
+[UBC R Study Group](https://github.com/UBC-R-Study-group/studyGroup)
+
+![Homepage](Screenshot from 2020-01-22 13-47-10.png)
+
+<br>
+
+
+
