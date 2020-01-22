@@ -16,7 +16,7 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |-----------|-----------------------------------------------------|-----------|
 |2020 Jan 15| CANCELED DUE TO WEATHER                             | laijasmine travis-m-blimkie arnavs|
 |2020 Jan 22| Welcome back! & Intro to Rmarkdown                  | laijasmine travis-m-blimkie arnavs|
-|2020 Jan 29| Stringr - manipulating text data                    | TBA       |
+|2020 Jan 29| Workalong                                           |           |
 |2020 Feb 5 | Sharing things learned from rstudio::conf           | laijasmine|
 |2020 Feb 12| Introduction to “Tidy Tuesday”                      | TBA       |
 |2020 Feb 19| READING WEEK - NO MEET UP                           |           |
