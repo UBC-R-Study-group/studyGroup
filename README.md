@@ -21,11 +21,11 @@ We will also be continuing the study group come the new year; our Winter 2020 sc
 |2020 Feb 12| Introduction to “Tidy Tuesday”                      | TBA       |
 |2020 Feb 19| READING WEEK - NO MEET UP                           |           |
 |2020 Feb 26| Workalong                                           | TBA       |
-|2020 Mar 4 | Introduction to mapping with Leaflet                | laijasmine|
+|2020 Mar 4 | Introduction to Mapping with Leaflet                | laijasmine|
 |2020 Mar 11| Workalong                                           |           |
 |2020 Mar 18| Tidy Tuesday                                        | TBA       |
 |2020 Mar 25| Workalong                                           |           |
-|2020 Apr 1 | Into to R Package Development                       | travis-m-blimkie |       |
+|2020 Apr 1 | Intro to R Package Development                      | travis-m-blimkie |       |
 |2020 Apr 8 | End-of-Term Session                                 |           |
 
 
