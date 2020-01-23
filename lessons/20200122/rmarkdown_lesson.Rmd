@@ -32,6 +32,7 @@ rendered (typically to HTML or PDF), which runs the code, displays the results,
 incldues images, etc. to generate the final document.  
 
 This lesson will cover some of the basics of RMarkdown, including:
+
 - How to create an RMarkdown document
 - Basic elements of an rmd document
   - YAML header
