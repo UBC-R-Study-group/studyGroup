@@ -1,0 +1,101 @@
+---
+title: "What I learned at rstudio::conf2020"
+author: "Jasmine"
+date: "03/02/2020"
+output: 
+  ioslides_presentation:
+    transition: "faster"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include = TRUE, warning = FALSE, message = FALSE, comment = "")
+```
+## 
+- Not sponsored by RStudio!
+
+## {.columns-2}
+![](https://avatars2.githubusercontent.com/u/52468242?s=200&v=4){width=300px}
+<br>
+<br>
+
+- 2 days of workshops
+- 2 days of conference talks
+
+## Birds of a Feather
+
+- ![](https://community.rstudio.com/uploads/default/original/3X/6/f/6f2cb22748aa6c0135ce7dc71182a23602670c28.jpeg){width=800px}
+- ability to connect with people with the same interests
+- ie. RLadies, Artists, Spatial, Education, Academia, Finance, Healthcare
+
+## 4 different tracks
+- geared toward different skill levels
+- I feel like it would be most beneficial if you had some experience with using a lot of the packages in the tidyverse 
+- amazing talks that are all live streamed
+- included remote participants in online Q&A
+
+## Highlights
+- I went to a lot of talks on visualization , design , community, education and workflow related
+- Still need to catch up on talks I couldn’t go to
+
+## Day 1 Keynotes
+<center>
+
+- ![](https://blog.himama.com/wp-content/uploads/2019/01/certified-b-corp-himama-1370x633.png){width=500px}
+
+</center>
+- main big announcement
+- rstudio is now a certified B corp `r emo::ji("tada")`
+
+## Education
+- ![](https://tinystats.github.io/teacups-giraffes-and-statistics/images/00_narrative/Fireside.jpg){width=500px}
+- [Of Teacups, Giraffes, & R Markdown](https://tinystats.github.io/teacups-giraffes-and-statistics/)
+- lovely visual journey of the design process
+- almost like a picture book
+
+## Community
+- [If You Build It, They Will Come...But Then What? Facilitating Communities Of Practice In R](https://www.slideshare.net/katehertweck/if-you-build-it-they-will-comebut-then-what-facilitating-communities-of-practice-in-r)
+- gives me perspective on organizing coding groups
+- even people who are doing this as their job struggle to get groups together
+
+## Learning and Using R
+- [Learning R With Humorous Side Projects](http://www.ryantimpe.com/rstudio2020.pdf)
+- the highlight of all the talks for me!
+- using lego -`library(brickr)`, tv shows and dinosaurs to motivate R learning
+- helped him get his current job at Lego!
+
+## Day 2 Keynotes
+- Jenny Bryan’s [object closure not subsettable](https://github.com/jennybc/debugging#readme)
+- `r emo::ji("computer") `name based upon the common but confusing R error message
+- useful talk on debugging for all skill levels
+- one of the live polls was "What's your main debugging method"
+- majority by a landslide: **"Google is my BFF"**
+
+## Communicate
+- [Don’t Repeat Yourself, Talk To Yourself! Repeated Reporting In The R Universe](https://sharstudioconf.netlify.com/#1)
+- Nice to see other attempts at streamlining a workflow containing emails, SPSS, Excel, Word
+- Although R is great for a lot of things but we really need:
+- Clear names, good templates and package documentation to make it all work
+
+## ggplot2
+- [Spruce Up Your Ggplot2 Visualizations With Formatted Text](https://www.slideshare.net/ClausWilke/spruce-up-your-ggplot2-visualizations-with-formatted-text)
+- with `library(ggtext)`
+- `r emo::ji("clap")` you can now easily use *italics* in ggplots
+- `r emo::ji("clap")` **coloured** text can be easily added to ggplots
+- `r emo::ji("clap")` **images** can be easily integrated into ggplots
+- all simple things but makes our lives so much easier
+- *note* not available on CRAN yet...
+
+## Concluding thoughts
+- Great conference for all individuals from various background
+- Really great for getting exposed to new packages and connect with the community in person
+- Welcoming atmosphere facilitated by the organizing team
+
+## But what everyone is actually there for...
+- ![](https://www.mitchelloharawild.com/blog/2018-07-10-hexwall_files/figure-html/final-1.png){height=400px}
+
+## Everything is conveniently online!
+- [Link to all 2020 slides](https://github.com/EmilHvitfeldt/RStudioConf2020Slides)
+- [2020 Workshop repos](https://github.com/rstudio-conf-2020)
+- 2020 Video Links have yet to be posted
+- [2019 Videos](https://resources.rstudio.com/rstudio-conf-2019)
+
+
