@@ -1,4 +1,4 @@
-### TERM 2 - Winter 2020 (TENTATIVE)
+### TERM 2 - Winter 2020
 | Date      | Event                                               | Lead                              |
 |-----------|-----------------------------------------------------|-----------------------------------|
 |2020 Jan 15| CANCELED DUE TO WEATHER                             | laijasmine travis-m-blimkie arnavs|

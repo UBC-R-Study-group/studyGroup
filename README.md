@@ -11,7 +11,7 @@ Here's our *tentative* schedule for the semester. This might not be the most up-
 We will also be continuing the study group come the new year; our Winter 2020 schedule will be posted here. 
 
 **We are already looking for people to lead our sessions!** Drop us a line at ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are interested in teaching one of the lessons.
-### TERM 2 - Winter 2020 (TENTATIVE)
+### TERM 2 - Winter 2020
 | Date      | Event                                               | Lead      |
 |-----------|-----------------------------------------------------|-----------|
 |2020 Jan 15| CANCELED DUE TO WEATHER                             | laijasmine travis-m-blimkie arnavs|
