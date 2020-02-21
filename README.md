@@ -6,7 +6,7 @@ Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert you
 ## Schedule
 Come join us on **Wednesdays 1-2pm at Koerner Library Room 548/552.**
 
-Here's our *tentative* schedule for the semester. This might not be the most up-to-date; for that, please check the issues.
+Here's our *tentative* schedule for the semester. This might not be the most up-to-date; for that, please check the [issues](https://github.com/UBC-R-Study-group/studyGroup/issues).
 
 We will also be continuing the study group come the new year; our Winter 2020 schedule will be posted here. 
 
