@@ -18,8 +18,8 @@ Here's our *tentative* schedule for the semester. This might not be the most up-
 |2020 Feb 5 | Sharing things learned from rstudio::conf           | laijasmine|
 |2020 Feb 12| Introduction to “Well-Kept Wednesday”               | laijasmine travis-m-blimkie|
 |2020 Feb 19| READING WEEK - NO MEET UP                           |           |
-|2020 Feb 26| Work-a-long                                         |           |
-|2020 Mar 4 | Introduction to Mapping with Leaflet                | laijasmine|
+|2020 Feb 26| Introduction to Mapping with Leaflet                                        |   laijasmine        |
+|2020 Mar 4 | Work-a-long                 | |
 |2020 Mar 11| Work-a-long                                         |           |
 |2020 Mar 18| Well-Kept Wednesday                                 | laijasmine travis-m-blimkie       |
 |2020 Mar 25| Work-a-long                                         |           |
