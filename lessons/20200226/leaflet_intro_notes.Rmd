@@ -1,0 +1,188 @@
+---
+title: "Introduction to Leaflet"
+author: "Jasmine"
+date: "24/02/2020"
+output: html_document
+---
+
+## Install `leaflet` and and other packages
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#install.packages("leaflet", "tidyverse", "readxl")
+```
+
+## Load libraries
+```{r libraries}
+library(tidyverse)
+library(readxl)
+library(leaflet)
+```
+
+## Read in the data
+```{r load data, warning=FALSE}
+ak <- read_xlsx("data/2019Sep26_algae_alaska.xlsx")
+```
+## Take a look at the data
+- notice that there is the convenient `Geo_LatDecimal` and `Geo_LongDecimal`
+
+### Important GIS terms
+####`Datum` 
+- *a set of reference points, used for locating places on the Earth*
+- why so many? - the earth is not a perfect sphere -> different datums are better for different areas in the world (ie NAD84 for North America)
+- usually it is in `WGS84` (ie google maps)
+- important in GIS data because all coordinates must have the same Datum (but often not reported)
+- mismatching your base map and your coordinate datum = weird results
+
+#### `UTM` 
+- Universal Transverse Mercator
+- *a plane coordinate grid system named for the map projection*
+- can also be converted to coordinate data
+```{r}
+glimpse(ak)
+```
+
+## Goal: Map one of the species
+
+### 1. Filter the data frame
+```{r}
+df_ss <- ak %>% 
+  filter(Genus == "Saccharina", Species ==  "subsimplex")
+```
+
+### 2. Map on to leaflet
+#### Leaflet Basics
+- similar to `ggplot` philosophy -> layering elements
+- add commands start with `add____()`
+- chain together layers by using `%>%`
+
+#### start with basic leaflet call
+```{r}
+leaflet()
+```
+
+#### Basemap
+- `?addProviderTiles` to see full list of providers
+- Preview basemap tiles [here](https://leaflet-extras.github.io/leaflet-providers/preview/index.html)
+
+```{r}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") 
+```
+
+### Add some points
+- this is all you need to make a basic map
+- you don't need to find a base map or decide on an extent before hand
+- good for large data sets
+```{r}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addCircleMarkers(lat = df_ss$Geo_LatDecimal, lng = df_ss$Geo_LongDecimal)
+```
+
+## Now for some extras
+
+### Add some different points
+- `addAwesomeMarkers` gives you map pin markers
+```{r}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addAwesomeMarkers(lat = df_ss$Geo_LatDecimal, lng = df_ss$Geo_LongDecimal)
+```
+
+### Add some information with the points
+- now you can click on the points for a pop up bubble
+```{r}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addCircleMarkers(lat = df_ss$Geo_LatDecimal, lng = df_ss$Geo_LongDecimal,
+                   popup = paste("Collector:", df_ss$`Primary Collector`,
+                                 "Date collected:", df_ss$`Date Collected`))
+```
+
+### Clustering
+- using `markerClusterOptions()`
+- useful for large datasets
+```{r markerClusterOptions}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addCircleMarkers(lat = df_ss$Geo_LatDecimal, lng = df_ss$Geo_LongDecimal,
+                   popup = paste("Collector:", df_ss$`Primary Collector`,
+                                 "Date collected:", df_ss$`Date Collected`,
+                                 ", Location:", df_ss$Location, 
+                                 ", Collect no.:",df_ss$`Collector Number`),
+                   clusterOptions = markerClusterOptions())
+```
+
+### Add buttons
+- add zoom button using javascript (or use google)
+```{r}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addCircleMarkers(lat = df_ss$Geo_LatDecimal, lng = df_ss$Geo_LongDecimal) %>% 
+  addEasyButton(easyButton(icon = "fa-crosshairs", title = "Locate Me",
+                           onClick = JS("function(btn, map){ map.setZoom(2);}")))
+```
+
+
+## Now try this with the BC data
+```{r bc solutions, warning=FALSE}
+bc <- read_xlsx("data/2019Sep26_algae_bc.xlsx")
+
+top_sp_bc <- bc %>% 
+  mutate(gs = paste(Genus,Species)) %>% 
+  group_by(gs) %>% 
+  summarise(n())
+
+df_ms <- bc %>% 
+  filter(Genus == "Mazzaella", Species == "splendens")
+
+
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addCircleMarkers(lat = df_ms$Geo_LatDecimal, lng = df_ms$Geo_LongDecimal,
+                   popup = paste("Collector:", df_ms$`Primary Collector`,
+                                 "Date collected:", df_ms$`Date Collected`,
+                                 ", Location:", df_ms$Location, 
+                                 ", Collect no.:",df_ms$`Collector Number`),
+                   clusterOptions = markerClusterOptions())
+
+```
+
+#### BONUS - WMS tiles
+- **W**eb **M**ap tile **S**ervice: *standard protocol for serving pre-rendered or run-time computed georeferenced map tiles over the Internet*
+- Get this from [DataBC](https://catalogue.data.gov.bc.ca/)
+- 2000 + data sets
+
+##### What you will need to plot WMS tiles:
+- baseUrl
+- layers
+
+
+- We will use [Parks and Protected Areas](https://catalogue.data.gov.bc.ca/dataset/parks-and-protected-areas-section-boundaries)
+- [click](https://catalogue.data.gov.bc.ca/dataset/parks-and-protected-areas-section-boundaries/resource/bb167646-e401-4a2a-bb3d-b7a44c11c097) WMS getCapabilities request option
+- copy the [url](`https://openmaps.gov.bc.ca/geo/pub/WHSE_ENVIRONMENTAL_MONITORING.SHZN_HAB_OBS_POLYS_SV/ows?service=WMS`), removing `&request=GetCapabilities`
+
+###### Layers
+[Link to file](https://openmaps.gov.bc.ca/geo/pub/WHSE_ADMIN_BOUNDARIES.ADM_BC_PARKS_SECTIONS_SP/ows?service=WMS&request=GetCapabilities)
+- search for `pub`
+- should find something like this `pub:WHSE_ADMIN_BOUNDARIES.ADM_BC_PARKS_SECTIONS_SP`
+
+###### Options
+- add `WMSTileOptions(transparent = TRUE, zoomToBoundsOnCLick = TRUE)`
+
+*Note * You may need to zoom in to see the layer appear
+```{r}
+leaflet() %>% 
+  addProviderTiles("OpenStreetMap.Mapnik") %>% 
+  addWMSTiles("https://openmaps.gov.bc.ca/geo/pub/WHSE_ADMIN_BOUNDARIES.ADM_BC_PARKS_SECTIONS_SP/ows?service=WMS",
+              layers = "pub:WHSE_ADMIN_BOUNDARIES.ADM_BC_PARKS_SECTIONS_SP",
+              options = WMSTileOptions(transparent = TRUE,
+                                       zoomToBoundsOnCLick = TRUE)) %>% 
+    addCircleMarkers(lat = df_ms$Geo_LatDecimal, lng = df_ms$Geo_LongDecimal)
+```
+
+### Try finding your own wms tiles and plotting
+```{r}
+
+```
+
