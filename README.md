@@ -12,6 +12,7 @@ line with UBC's decision to cancel all in-person classes. If you have questions,
 we will continue to respond to issues created on the Github page, as well as
 answer questions in the Slack group (see the related
 [issue](https://github.com/UBC-R-Study-group/studyGroup/issues/2#issuecomment-538673045)).  
+Thank you for your ongoing support of the R Study Group and we look forward to supporting everyone remotely!  
 
 -Travis & Jasmine, UBC R Study Group Organizers
 
