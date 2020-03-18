@@ -2,9 +2,6 @@ UBC R Study Group
 =======================
 
 
-***
-
-
 ## March 16th, 2020: UPDATE
 Due to growing concerns regarding the COVID-19 pandemic, the organizers of the
 UBC R Study Group have decided to CANCEL the remaining sessions for the term, in
