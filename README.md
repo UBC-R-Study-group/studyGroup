@@ -1,22 +1,6 @@
 UBC R Study Group
 =======================
 
-
-## March 16th, 2020: UPDATE
-Due to growing concerns regarding the COVID-19 pandemic, the organizers of the
-UBC R Study Group have decided to CANCEL the remaining sessions for the term, in
-line with UBC's decision to cancel all in-person classes. If you have questions,
-we will continue to respond to issues created on the Github page, as well as
-answer questions in the Slack group (see the related
-[issue](https://github.com/UBC-R-Study-group/studyGroup/issues/2#issuecomment-538673045)).  
-Thank you for your ongoing support of the R Study Group and we look forward to supporting everyone remotely!  
-
--Travis & Jasmine, UBC R Study Group Organizers
-
-
-***
-
-
 Welcome to the UBC R Study Group! We are a group of **R/Python/Julia/(insert
 your favourite language)** enthusiasts who love data. We are an inclusive group
 and welcome everyone. Check out our [event listings on our
@@ -27,33 +11,41 @@ Wednesday sessions are totally open; no sign-up, registration, or fee is
 required to attend.
 
 ## Schedule
-Come join us on **Wednesdays 1-2pm at Koerner Library Room 548/552.**
+Because of the ongoing situation with COVID-19 and the restrictions in place, 
+we will be holding all of our meetings virtually! Check this page for Zoom
+links for each session. We will still be having our sessions every Wednesday
+from 1-2pm.
 
 Here's our *tentative* schedule for the semester. This might not be the most
 up-to-date; for that, please check the
 [issues](https://github.com/UBC-R-Study-group/studyGroup/issues).
 
-**We are already looking for people to lead our sessions!** Drop us a line at
+**We are always looking for people to lead our sessions!** Drop us a line at
 ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are
-interested in teaching one of the lessons.
+interested in teaching one of the lessons, or if you'd like to help organize
+the study group.
 
-### TERM 2 - Winter 2020
-| Date      | Event                                               | Lead      |
-|-----------|-----------------------------------------------------|-----------|
-|2020 Jan 15| CANCELED DUE TO WEATHER                             | laijasmine travis-m-blimkie arnavs|
-|2020 Jan 22| Welcome back! & Intro to Rmarkdown                  | laijasmine travis-m-blimkie arnavs|
-|2020 Jan 29| Work-a-long                                         |           |
-|2020 Feb 5 | Sharing things learned from rstudio::conf           | laijasmine|
-|2020 Feb 12| Introduction to “Well-Kept Wednesday”               | laijasmine travis-m-blimkie|
-|2020 Feb 19| READING WEEK - NO MEET UP                           |           |
-|2020 Feb 26| Introduction to Mapping with Leaflet *date changed* | laijasmine|
-|2020 Mar 4 | Work-a-long                                         |           |
-|2020 Mar 11| Work-a-long                                         |           |
-|2020 Mar 18| ~~Well-Kept Wednesday~~                                 | laijasmine travis-m-blimkie       |
-|2020 Mar 25| ~~Work-a-long~~                                         |           |
-|2020 Apr 1 | ~~Intro to R Package Development~~                      | travis-m-blimkie |       |
-|2020 Apr 8 | ~~End-of-Term Session~~                                 |           |
+## Term 2 - Winter 2021
+| Date        | Event                     | Lead            |
+|:------------|:--------------------------|:----------------|
+| 2021 Jan 13 | TBD                       | github_username |
+| 2021 Jan 20 | TBD                       | github_username |
+| 2021 Jan 27 | TBD                       | github_username |
+| 2021 Feb 3  | TBD                       | github_username |
+| 2021 Feb 10 | TBD                       | github_username |
+| 2021 Feb 17 | READING WEEK - NO MEET UP |                 |
+| 2021 Feb 24 | TBD                       | github_username |
+| 2021 Mar 3  | TBD                       | github_username |
+| 2021 Mar 10 | TBD                       | github_username |
+| 2021 Mar 17 | TBD                       | github_username |
+| 2021 Mar 24 | TBD                       | github_username |
+| 2021 Mar 31 | TBD                       | github_username |
+| 2021 Apr 7  | TBD                       | github_username |
 
+## Help Desk
+We have an open [issue](https://github.com/UBC-R-Study-group/studyGroup/issues/102) 
+which you can use to post quick questions; one of the organizers should be 
+able to respond in a timely manner.
 
 ## What's a Work-A-Long session?
 These sessions are meant as an opportunity for you to come and ask questions or
@@ -69,11 +61,10 @@ Welcome to our Mozilla Study Group! A few things to do & know now that you're he
  notifications of new discussions; if you don't want email, but would like an
  alert just on GitHub, change the setting in Settings -> Notification Center
  (Settings is the little cog in the top right).
- - **Check out the issue tracker:** click on 'issues' in the sidebar on the
- right; this is where all the conversations this study groups is having live.
- Use this space to ask questions, request events, make suggestions, or just say
- hi.
- - **Read the code of conduct:** this Study Group is for everyone - we abide by
+ - **Check out the issue tracker:** click on 'issues' in the top bar; this is 
+ where all the conversations this study groups is having live. Use this space 
+ to ask questions, request events, make suggestions, or just say hi!
+  - **Read the code of conduct:** this Study Group is for everyone - we abide by
  a [set of rules](https://www.mozillascience.org/code-of-conduct/) that require
  everyone be treated with respect. Help us make a space where everyone feels
  welcome, and we'll all have a better time!
