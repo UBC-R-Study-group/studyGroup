@@ -31,21 +31,21 @@ Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to go to
 the issues page to find the appropriate entry.
 
 ## Winter 2021 Tentative Schedule
-| Date        | Event                              | Lead                         |
-|:------------|:-----------------------------------|:-----------------------------|
-| 2021 Jan 13 | Introductions & RMarkdown Tutorial | travis-m-blimkie, zhemingfan |
-| 2021 Jan 20 | Work-a-long                        | travis-m-blimkie, zhemingfan |
-| 2021 Jan 27 | TBD                                | github_username              |
-| 2021 Feb 3  | TBD                                | github_username              |
-| 2021 Feb 10 | TBD                                | github_username              |
-| 2021 Feb 17 | READING WEEK - NO MEET UP          |                              |
-| 2021 Feb 24 | TBD                                | github_username              |
-| 2021 Mar 3  | TBD                                | github_username              |
-| 2021 Mar 10 | TBD                                | github_username              |
-| 2021 Mar 17 | TBD                                | github_username              |
-| 2021 Mar 24 | TBD                                | github_username              |
-| 2021 Mar 31 | TBD                                | github_username              |
-| 2021 Apr 7  | TBD                                | github_username              |
+| Date        | Event                              | Lead                         | Issue                                                             |
+|:------------|:-----------------------------------|:-----------------------------|:------------------------------------------------------------------|
+| 2021 Jan 13 | Introductions & RMarkdown Tutorial | travis-m-blimkie, zhemingfan | [115](https://github.com/UBC-R-Study-group/studyGroup/issues/115) |
+| 2021 Jan 20 | Work-a-long                        | travis-m-blimkie, zhemingfan | [116](https://github.com/UBC-R-Study-group/studyGroup/issues/116) |
+| 2021 Jan 27 | TBD                                | github_username              |                                                                   |
+| 2021 Feb 3  | TBD                                | github_username              |                                                                   |
+| 2021 Feb 10 | TBD                                | github_username              |                                                                   |
+| 2021 Feb 17 | READING WEEK - NO MEET UP          |                              |                                                                   |
+| 2021 Feb 24 | TBD                                | github_username              |                                                                   |
+| 2021 Mar 3  | TBD                                | github_username              |                                                                   |
+| 2021 Mar 10 | TBD                                | github_username              |                                                                   |
+| 2021 Mar 17 | TBD                                | github_username              |                                                                   |
+| 2021 Mar 24 | TBD                                | github_username              |                                                                   |
+| 2021 Mar 31 | TBD                                | github_username              |                                                                   |
+| 2021 Apr 7  | TBD                                | github_username              |                                                                   |
 
 ## What's a Work-A-Long session?
 These sessions are meant as an opportunity for you to come and ask questions or
