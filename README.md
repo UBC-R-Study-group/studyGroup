@@ -25,33 +25,40 @@ ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are
 interested in teaching one of the lessons, or if you'd like to help organize
 the study group.
 
-## Term 2 - Winter 2021
-| Date        | Event                     | Lead            |
-|:------------|:--------------------------|:----------------|
-| 2021 Jan 13 | TBD                       | github_username |
-| 2021 Jan 20 | TBD                       | github_username |
-| 2021 Jan 27 | TBD                       | github_username |
-| 2021 Feb 3  | TBD                       | github_username |
-| 2021 Feb 10 | TBD                       | github_username |
-| 2021 Feb 17 | READING WEEK - NO MEET UP |                 |
-| 2021 Feb 24 | TBD                       | github_username |
-| 2021 Mar 3  | TBD                       | github_username |
-| 2021 Mar 10 | TBD                       | github_username |
-| 2021 Mar 17 | TBD                       | github_username |
-| 2021 Mar 24 | TBD                       | github_username |
-| 2021 Mar 31 | TBD                       | github_username |
-| 2021 Apr 7  | TBD                       | github_username |
+## Winter 2021 - Important Information
+Because of the ongoing situation with Covid-19 and the restrictions put in 
+place, we will be holding all of out sessions for Winter 2021 virtually! 
+Please check the relevant issue for each session to find the Zoom information.
+Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to go to 
+the issues page to find the appropriate entry.
 
-## Help Desk
-We have an open [issue](https://github.com/UBC-R-Study-group/studyGroup/issues/102) 
-which you can use to post quick questions; one of the organizers should be 
-able to respond in a timely manner.
+## Winter 2021 Tentative Schedule
+| Date        | Event                              | Lead                         |
+|:------------|:-----------------------------------|:-----------------------------|
+| 2021 Jan 13 | Introductions & RMarkdown Tutorial | travis-m-blimkie, zhemingfan |
+| 2021 Jan 20 | Work-a-long                        | travis-m-blimkie, zhemingfan |
+| 2021 Jan 27 | TBD                                | github_username              |
+| 2021 Feb 3  | TBD                                | github_username              |
+| 2021 Feb 10 | TBD                                | github_username              |
+| 2021 Feb 17 | READING WEEK - NO MEET UP          |                              |
+| 2021 Feb 24 | TBD                                | github_username              |
+| 2021 Mar 3  | TBD                                | github_username              |
+| 2021 Mar 10 | TBD                                | github_username              |
+| 2021 Mar 17 | TBD                                | github_username              |
+| 2021 Mar 24 | TBD                                | github_username              |
+| 2021 Mar 31 | TBD                                | github_username              |
+| 2021 Apr 7  | TBD                                | github_username              |
 
 ## What's a Work-A-Long session?
 These sessions are meant as an opportunity for you to come and ask questions or
 get help with a programming problem. Bring your code or data, get advice or
 tips, and chat with your fellow peers. Just like our other sessions, these are
 totally open, no registration needed.
+
+## Help Desk
+We have an open [issue](https://github.com/UBC-R-Study-group/studyGroup/issues/102) 
+which you can use to post quick questions; one of the organizers should be 
+able to respond in a timely manner.
 
 ## For Participants
 Welcome to our Mozilla Study Group! A few things to do & know now that you're here:
