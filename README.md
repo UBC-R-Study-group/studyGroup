@@ -11,10 +11,8 @@ Wednesday sessions are totally open; no sign-up, registration, or fee is
 required to attend.
 
 ## Schedule
-Because of the ongoing situation with COVID-19 and the restrictions in place, 
-we will be holding all of our meetings virtually! Check this page for Zoom
-links for each session. We will still be having our sessions every Wednesday
-from 1-2pm.
+Regular meetings of the UBC R Study Group are held every Wednesday, from 1-2pm.
+Please see below for more detailed information for 2021 meet-ups.
 
 Here's our *tentative* schedule for the semester. This might not be the most
 up-to-date; for that, please check the
@@ -27,7 +25,7 @@ the study group.
 
 ## Winter 2021 - Important Information
 Because of the ongoing situation with Covid-19 and the restrictions put in 
-place, we will be holding all of out sessions for Winter 2021 virtually! 
+place, **we will be holding all of out sessions for Winter 2021 virtually!** 
 Please check the relevant issue for each session to find the Zoom information.
 Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to go to 
 the issues page to find the appropriate entry.
