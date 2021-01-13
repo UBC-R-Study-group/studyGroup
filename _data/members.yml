@@ -6,6 +6,14 @@
     - Shiny apps and packages
     - Teaching R
 
+- name: Jeremy Fan (co-organizer)
+  affiliation: UBC - MSc Student, Jones Lab
+  gituhub: zhemingfan
+  interests:
+    - Bioinformatics
+    - Cancer genomics
+    - R vs Python debates
+
 - name: Abhinav Checkervarty (PhD student)
   affiliation: UBC - Department of Experimental Medicine
   gituhub: abhi8138
