@@ -1,11 +1,3 @@
-- name: Jasmine Lai (co-organizer)
-  affiliation: UBC - Beaty Biodiversity Museum
-  github: laijasmine
-  interests:
-    - Biology (Plants & Seaweeds)
-    - Data cleaning
-    - Teaching
-    
 - name: Travis Blimkie (co-organizer)
   affiliation: UBC - REW Hancock Lab
   github: travis-m-blimkie
@@ -13,14 +5,6 @@
     - Bioinformatics
     - Shiny apps and packages
     - Teaching R
-
-- name: Arnav Sood (co-organizer)
-  affiliation: UBC - Vancouver School of Economics
-  github: arnavs
-  interests:
-    - Economics (computational macro)
-    - Julia language
-    - Teaching
 
 - name: Abhinav Checkervarty (PhD student)
   affiliation: UBC - Department of Experimental Medicine
