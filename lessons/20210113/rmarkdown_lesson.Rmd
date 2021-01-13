@@ -56,7 +56,8 @@ Another great resource can be found [here](https://bookdown.org/yihui/rmarkdown/
 - To get started, open RStudio, click **File** -> **New File** -> **RMarkdown...**
 - Enter a title and author, leave the output as HTML, and click **OK**
 
-By default, the new document will contain some code already, looking something like below:
+By default, the new document will contain some code already, looking something
+like below:
 ![](rmd_screenshot.png)
 
 <br>
