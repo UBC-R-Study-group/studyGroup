@@ -1,0 +1,206 @@
+---
+title: "RMarkdown Lesson"
+author: "Travis Blimkie"
+date: "January 13th, 2021"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+suppressPackageStartupMessages({
+  library(knitr)
+  library(tidyverse)
+})
+```
+
+***
+
+### Required Packages
+The following packages are dependencies for this lesson:
+```{r, eval = FALSE}
+install.packages(c("tidyverse", "rmarkdown", "kntir", "DT"))
+```
+
+***
+
+## Overview
+RMarkdown is a method of writing a document which can include text, images,
+links, code, results etc., to aid in communicating your work with others. It
+starts with an Rmd file, which is filled with text, code, etc. This is then
+rendered (typically to HTML or PDF), which runs the code, displays the results,
+incldues images, etc. to generate the final document.  
+
+This lesson will cover some of the basics of RMarkdown, including:
+
+- How to create an RMarkdown document
+- Basic elements of an rmd document
+  - YAML header
+  - Document headers
+- Regular text
+  - **Bold**, *italics*, and [links]()
+- Code chunks
+  - Code itself and plots
+
+A handy cheatsheet for RMarkdown can be found at the link below.  
+<https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf>  
+
+Another great resource can be found [here](https://bookdown.org/yihui/rmarkdown/)
+
+<br>
+
+## Creating an RMarkdown document
+
+- To get started, open RStudio, click **File** -> **New File** -> **RMarkdown...**
+- Enter a title and author, leave the output as HTML, and click **OK**
+
+By default, the new document will contain some code already, looking something like below:
+![](rmd_screenshot.png)
+
+<br>
+
+The first chunk sets some default options; namely, the `echo` option tells
+RStudio to include the code in the output document.  
+
+Let's render this document, by clicking the **Knit** button at the top (or
+CTRL+SHIFT+K).
+
+<br>
+
+## Creating a code chunk
+To make a new chunk of code, click anywhere below the pre-included stuff, and in
+the top right of the panel, click **Insert** -> **R** to insert an R code chunk
+(notice that we can also include code from other languages; we won't cover those
+here today). Notice the lines which begin and end the code chunk. Anywhere
+between those is where our code will go. Let's try loading the `mtcars` dataset
+and taking a quick look.
+```{r}
+data("mtcars")
+
+dim(mtcars)
+
+glimpse(mtcars)
+```
+
+<br>
+
+You can see our code is displayed, along with the output. By default, RMarkdown
+shows the output of a line of code directly after that line itself, which is why
+out chunk of code is broken or interrupted by the output from `dim()`. We can
+change this behavious with the chunk option `results = "hold"`, which tells R to
+wait and display all output/results after the chunk. Copying the same chunk from
+above, and changing that option yields:
+```{r, results = "hold"}
+data("mtcars")
+
+dim(mtcars)
+
+glimpse(mtcars)
+```
+
+<br>
+
+Now the whole code chunk is shown as a single piece, with both outputs below.  
+
+Its also worth mentioning that objects/variables you create it one chunk of code
+will be available in subsequent chunks of code, just like with a regular `.R`
+script.
+
+<br>
+
+## Code chunk options
+There are many different chunk options you can use including:
+
+- `echo` Determines if the code from the chunk should be displayed (results are
+still displayed)
+- `results` How results are handled (e.g. show, hold, hide, etc.)
+- `eval` If code should be run, or simply displayed
+- `include` Handles display of code and its results (but code is still run in
+the background)
+- `fig.height`, `fig.width` Height and width of figures in inches from code
+(e.g. plots)
+
+<br>
+
+Here's an example where we run some code, show some output, and create a plot:
+```{r}
+mtcars %>% 
+  rownames_to_column("car") %>% 
+  DT::datatable()
+```
+
+Here we use the `datatable()` function from the package **DT** to create a
+visually pleasing and interactive table. Though we won't cover them today, there
+are myriad options for customizing the style of the output table. Check the DT 
+documentation for more information.
+
+<br>
+
+```{r fig.height = 4, fig.width = 6, fig.align = "center"}
+ggplot(mtcars, aes(cyl, mpg, group = cyl)) +
+  geom_boxplot() +
+  labs(x = "No. Cylinders", y = "Miles per Gallon") +
+  theme_classic()
+```
+
+For the plot, we can use the options to change the height, width, and alignment
+of our output plot. Again, refer to the
+[cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+for more options.
+
+Code chunk options can be set globally at the beginning of the document, like
+`knitr::opts_chunk$set(echo = TRUE)`, or for specific chunks.  
+If you wish to specify multiple code chunk options, they are separated with a
+comma.
+
+<br>
+
+## Inserting images and links
+To create a link, use the following syntax: `[text to click on](link)`.  This create something like [this](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).  
+<br>
+For images, we use a slight variant of the above: `![optional
+caption](path/to/image.png).` R will look for the image in the same directory as
+the Rmd file, and display it in the document, like the example near the start of
+this lesson. Another example image is included below, with the sytax
+`![](drawing.png)`.
+
+![](drawing.png)
+
+<br>
+
+## Other YAML options
+Here is another example of another YAML header, this one including a few more
+modifications:
+
+``` {r eval = FALSE}
+---
+title: "Title"
+author: "Travis Blimkie"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    theme: flatly
+    highlight: kate
+    code_folding: show
+    toc: yes
+---
+```
+
+A breakdown of these options:
+
+- The date field is set to some R code, which grabs the current date and formats it as "Month Date, Year"
+- Set the theme for the document (not code chunks), see a list of available options [here](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style)
+- Syntax highlight style for code chunks, available options [here](https://bookdown.org/yihui/rmarkdown/html-document.html#appearance-and-style)
+- Enable hiding of code, but default to showing code
+- Enable click-able table of contents
+
+<br>
+
+## Other output options
+In addition to rendering your Rmd as an HTML file, you can use other options including:
+
+- github_document
+- pdf_document (may need to install additional packages)
+- io_slides for presentation
