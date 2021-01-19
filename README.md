@@ -10,6 +10,14 @@ board](https://github.com/ubc-r-study-group/studyGroup/issues). Our regular
 Wednesday sessions are totally open; no sign-up, registration, or fee is
 required to attend.
 
+## Winter 2021 - Important Information
+Because of the ongoing situation with Covid-19 and the restrictions put in 
+place, **we will be holding all of out sessions for Winter 2021 virtually!** 
+Please check the relevant issue for each session to find the Zoom information.
+You will need a Zoom account in order to join our meetings (available for 
+free). Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to 
+go to the issues page to find the appropriate entry.
+
 ## Schedule
 Regular meetings of the UBC R Study Group are held every Wednesday, from 1-2pm.
 Please see below for more detailed information for 2021 meet-ups.
@@ -23,29 +31,22 @@ ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are
 interested in teaching one of the lessons, or if you'd like to help organize
 the study group.
 
-## Winter 2021 - Important Information
-Because of the ongoing situation with Covid-19 and the restrictions put in 
-place, **we will be holding all of out sessions for Winter 2021 virtually!** 
-Please check the relevant issue for each session to find the Zoom information.
-Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to go to 
-the issues page to find the appropriate entry.
-
 ## Winter 2021 Tentative Schedule
-| Date        | Event                              | Lead                         | Issue                                                             |
-|:------------|:-----------------------------------|:-----------------------------|:------------------------------------------------------------------|
-| 2021 Jan 13 | Introductions & RMarkdown Tutorial | travis-m-blimkie, zhemingfan | [115](https://github.com/UBC-R-Study-group/studyGroup/issues/115) |
-| 2021 Jan 20 | Work-a-long                        | travis-m-blimkie, zhemingfan | [116](https://github.com/UBC-R-Study-group/studyGroup/issues/116) |
-| 2021 Jan 27 | TBD                                |                              |                                                                   |
-| 2021 Feb 3  | TBD                                |                              |                                                                   |
-| 2021 Feb 10 | TBD                                |                              |                                                                   |
-| 2021 Feb 17 | READING WEEK - NO MEET UP          |                              |                                                                   |
-| 2021 Feb 24 | TBD                                |                              |                                                                   |
-| 2021 Mar 3  | TBD                                |                              |                                                                   |
-| 2021 Mar 10 | TBD                                |                              |                                                                   |
-| 2021 Mar 17 | TBD                                |                              |                                                                   |
-| 2021 Mar 24 | TBD                                |                              |                                                                   |
-| 2021 Mar 31 | TBD                                |                              |                                                                   |
-| 2021 Apr 7  | TBD                                |                              |                                                                   |
+| Date        | Event                                     | Lead                         | Issue                                                             |
+|:------------|:------------------------------------------|:-----------------------------|:------------------------------------------------------------------|
+| 2021 Jan 13 | Introductions & RMarkdown Tutorial        | travis-m-blimkie, zhemingfan | [115](https://github.com/UBC-R-Study-group/studyGroup/issues/115) |
+| 2021 Jan 20 | Work-a-long                               |                              | [116](https://github.com/UBC-R-Study-group/studyGroup/issues/116) |
+| 2021 Jan 27 | Plotting with ggplot2 and other libraries | travis-m-blimkie             |                                                                   |
+| 2021 Feb 3  | Work-a-long                               |                              |                                                                   |
+| 2021 Feb 10 | Writing functions in R                    | travis-m-blimkie             |                                                                   |
+| 2021 Feb 17 | READING WEEK - NO MEET UP                 |                              |                                                                   |
+| 2021 Feb 24 | Shiny                                     | zhemingfan                   |                                                                   |
+| 2021 Mar 3  | Work-a-long                               |                              |                                                                   |
+| 2021 Mar 10 | Using git with RStudio                    | travis-m-blimkie             |                                                                   |
+| 2021 Mar 17 | Work-a-long                               |                              |                                                                   |
+| 2021 Mar 24 | R package development                     | zhemingfan                   |                                                                   |
+| 2021 Mar 31 | Work-a-long                               |                              |                                                                   |
+| 2021 Apr 7  | TBD                                       |                              |                                                                   |
 
 ## What's a Work-A-Long session?
 These sessions are meant as an opportunity for you to come and ask questions or
