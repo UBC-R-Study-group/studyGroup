@@ -12,7 +12,7 @@ required to attend.
 
 ## Winter 2021 - Important Information
 Because of the ongoing situation with Covid-19 and the restrictions put in 
-place, **we will be holding all of out sessions for Winter 2021 virtually!** 
+place, **we will be holding all of our sessions for Winter 2021 virtually!** 
 Please check the relevant issue for each session to find the Zoom information.
 You will need a Zoom account in order to join our meetings (available for 
 free). Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to 
