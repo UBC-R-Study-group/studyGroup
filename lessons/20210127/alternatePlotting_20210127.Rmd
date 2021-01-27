@@ -1,0 +1,248 @@
+---
+title: "High quality figures with ggplot2 and beyond"
+author: "Travis Blimkie"
+date: "January 27th, 2021"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo    = TRUE, 
+  warning = FALSE, 
+  message = FALSE, 
+  comment = ""
+)
+```
+
+***
+
+## Lesson overview
+Today we're going to look at a few ways of improving on default ggplot2
+graphics, as well as explore some other packages for plotting data.
+Specifically, we're going to look at the `cowplot` package for tweaking our
+ggplot2 figures, and the `ggtext` package which allows for more advanced text
+formatting on our plots. Then we'll produce interactive graphics via the
+`plotly` package.
+For this lesson we'll need the built-in `mtcars` data set in addition to the
+`gapminder` data to test out these different plotting methods.
+
+## Load packages
+Let's start by loading the libraries we'll need.  
+```{r libraries}
+# install.packages(c("cowplot", "plotly", "ggtext", "tidyverse", "gapminder"))
+library(cowplot)
+library(plotly)
+library(ggtext)
+library(gapminder)
+library(tidyverse)
+
+data("mtcars")
+mtcars <- mtcars %>% rownames_to_column("car")
+```
+
+<br>
+
+## Our first plot & themes
+Let's start by making a standard plot using `ggplot2` to get our baseline. 
+```{r basic_ggplot}
+ggplot(mtcars, aes(cyl, mpg)) +
+  geom_point()
+```
+
+<br>
+
+Let's see how we can tweak this plot using the available methods. We'll be
+making use of two functions here: `labs()` to create labels, and `theme()` to
+customize the appearance of our plot. Let's change the axis labels, add a title,
+and change the overall theme with `theme_bw()`.
+```{r tweak_ggplot_1}
+ggplot(mtcars, aes(cyl, mpg)) +
+  geom_point() +
+  labs(
+    x = "Number of Cylinders", 
+    y = "Miles per Gallon", 
+    title = "Comparing Engine Size and Fuel Efficiency"
+  ) +
+  theme_bw() +
+  theme(axis.ticks = element_blank())
+```
+
+<br>
+
+The `theme_bw()` function is acting as a "preset", changing multiple arguments
+of the regular `theme()` function at once. There are some additional versions of
+`theme_bw()`, such as `theme_classic()`, and `theme_grey()` (the default of
+ggplot2). For `theme()` itself, there are a whole range of arguments that can be
+used to alter the appearance of the plot. Any argument you want to specify must
+be in the format of `element_x()` (like the `element_blank()` we used earlier).
+Let's build on this example by increasing the font size, as the default is often
+too small.
+```{r tweak_ggplot_2}
+ggplot(mtcars, aes(cyl, mpg)) +
+  geom_point(size = 3, pch = 21, fill = "dodgerblue4", colour = "black") +
+  labs(
+    x = "Number of Cylinders", 
+    y = "Miles per Gallon", 
+    title = "Comparing Engine Size and Fuel Efficiency"
+  ) +
+  theme_bw() +
+  theme(
+    axis.ticks = element_blank(),
+    axis.text = element_text(size = 12, colour = "black"),
+    title = element_text(size = 14, colour = "dodgerblue4"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+<br>
+
+Now our plot looks a lot nicer!  
+
+<br>
+
+## Making use of cowplot
+Another alternative to making a bunch of little changes ourselves is to use
+another package, `cowplot`. This package comes with suite of functions, but
+let's start with `theme_cowplot()`, which makes a variety of changes to the
+default look of ggplot2 graphics.
+```{r cowplot_1}
+ggplot(mtcars, aes(cyl, mpg)) +
+  geom_point(size = 3, pch = 21, fill = "dodgerblue4", colour = "black") +
+  labs(
+    x = "Number of Cylinders", 
+    y = "Miles per Gallon", 
+    title = "Comparing Engine Size and Fuel Efficiency"
+  ) +
+  theme_cowplot()
+```
+
+<br>
+
+Another really useful feature of the `cowplot` package is the ability to combine
+multiple plots into a multi-panel style figure using the `plot_grid()` function.
+Let's test it out with an example.
+```{r plot_grid, fig.height = 8}
+mpg_cyl_plot <- ggplot(mtcars, aes(cyl, mpg)) +
+  geom_point(size = 3, pch = 21, fill = "dodgerblue4", colour = "black") +
+  labs(
+    x = "Number of Cylinders", 
+    y = "Miles per Gallon", 
+    title = "Comparing Engine Size and Fuel Efficiency"
+  ) +
+  theme_cowplot()
+
+disp_hp_plot <- ggplot(mtcars, aes(disp, hp)) +
+  geom_smooth(method = "lm", colour = "grey") +
+  geom_point(size = 3, pch = 21, fill = "tomato", colour = "black") +
+  labs(
+    x = "Displacement", 
+    y = "Horse Power", 
+    title = "Comparing Engine Size and Displacement"
+  ) +
+  theme_cowplot()
+
+plot_grid(
+  mpg_cyl_plot, disp_hp_plot, 
+  nrow = 2, ncol = 1, align = "h", labels = "AUTO")
+```
+
+<br>
+
+## Customizing text with ggtext
+The next package we'll use, `ggtext`, allows us to format any text on our plots,
+using a bit of HTML. Let's start with an example.
+```{r ggtext_1}
+gapminder_filtered <- gapminder %>% 
+  filter(country %in% c("Canada", "Germany", "France", "Australia")) %>% 
+  mutate(country_continent = paste0(country, "<br><i>(", continent, ")</i>"))
+
+ggplot(gapminder_filtered, aes(country_continent, pop, fill = country)) +
+  geom_boxplot() +
+  theme_cowplot() +
+  theme(
+    axis.text.x = element_markdown(),
+    legend.position = "none"
+  ) +
+  labs(x = "Country", y = "Population")
+
+```
+
+<br>
+
+## Interactive plots with plotly
+Now let's move on to another plotting library, `plotly`. Unlike ggplot2, this
+package allows us to make interactive HTML plots. Let's see what this looks like
+with an example. Note the syntax is a bit different then ggplot2, so pay close
+attention to how we set up our plot.
+```{r plotly_1}
+plot_ly(mtcars, x = ~cyl, y = ~mpg, type = "scatter", text = ~car) %>% 
+  plotly::layout(
+    title = "Comparing Engine Size and Fuel Efficiency",
+    xaxis = list(title = "Number of Cylinders"),
+    yaxis = list(title = "Miles per Gallons")
+  )
+```
+
+<br>
+
+As you can see, hovering our cursor over the points displays the coordinates as well as the name of the vehicle.  
+Let's see how we can tweak this some more. 
+```{r plotly_2}
+fit <- lm(mpg ~ cyl, data = mtcars)
+
+plot_ly(mtcars, x = ~cyl, y = ~mpg, type = "scatter", text = ~car) %>% 
+  add_lines(x = ~cyl, y = fitted(fit), line = list(color = "black")) %>% 
+  plotly::layout(
+    title = "Comparing Engine Size and Fuel Efficiency",
+    xaxis = list(title = "Number of Cylinders"),
+    yaxis = list(title = "Miles per Gallons")
+  )
+```
+
+<br>
+
+We can also extensively format the hover text displayed on the plot, using a bit
+of HTML language.
+```{r plotly_3}
+fit <- lm(mpg ~ cyl, data = mtcars)
+
+plot_ly(mtcars, x = ~cyl) %>%
+  add_trace(
+    y = ~mpg, 
+    mode = "markers", 
+    marker = list(size = 10),
+    hoverinfo = "text",
+    text = ~paste0("<b>Car: </b>", car)
+  ) %>% 
+  add_trace(y = fitted(fit), mode = "lines") %>% 
+  plotly::layout(
+    title = "Comparing Engine Size and Fuel Efficiency",
+    xaxis = list(title = "Number of Cylinders"),
+    yaxis = list(title = "Miles per Gallons")
+  )
+```
+
+<br>
+
+Making a boxplot using plotly, specifying custom colours, and adding lines along
+the x and y axis.
+```{r plotly_4}
+plot_ly(mtcars, x = ~cyl) %>%
+  add_boxplot(
+    y = ~mpg, 
+    marker = list(color = "black"),
+    line = list(color = "black"), 
+    fillcolor = "white"
+  ) %>% 
+  plotly::layout(
+    title = "Comparing Engine Size and Fuel Efficiency",
+    xaxis = list(showline = TRUE, 
+                 title = "Number of Cylinders", 
+                 titlefont = list(size = 14), 
+                 tickfont = list(size = 14)),
+    yaxis = list(showline = TRUE, 
+                 title = "Miles per Gallons",
+                 titlefont = list(size = 14), 
+                 tickfont = list(size = 14))
+  )
+```
