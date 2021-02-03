@@ -1,0 +1,405 @@
+---
+title: "Intro to Tidyverse"
+author: "Jeremy Fan"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = "")
+```
+
+
+ Challenge 2 code here(x <- gapminder%>%filter(year>=1980)%>%arrange((year))
+ 
+ 
+##echo: (TRUE; logical or numeric) Whether to display the source code in the output document.
+
+##message: whether to preserve the message emitted by message() in the source code
+
+##warning: to perserve warnings or not
+
+##prefix to be added before each line of the text output.. only relevant if you have text output, default is set to ##, but  making it "" will make it nothing
+
+
+***
+> These materials have been taken from the Software Carpentry: R Novice Lesson.
+You can find the original materials
+[here](https://github.com/swcarpentry/r-novice-gapminder)
+
+This lesson will cover some basic functions that can be used to manipulate data
+in R. Again, we will be using the gapminder data set, which includes country
+information on GDP, population, etc.
+
+There are five main functions we'll be talking about today, each allowing us to
+manipulate data frames. These five functions are:
+
+* `select()`  --  Choose columns (variables or attributes) from our data frame
+* `filter()`  --  Choose rows (samples or observations) from our data frame
+* `mutate()`  --  Create new columns, based on existing ones
+* `group_by()`  --  Group rows based on a particular column/value within that column 
+* `summarize()`  --  Perform some function on the grouped data
+
+If you haven't already, make sure you have `dplyr()` and `gapminder()` installed
+and loaded with the following commands:
+
+```{r}
+# Download the packages
+
+
+# install.packages(c("tidyverse", "gapminder"))
+# Load the packages for use
+library(tidyverse)
+library(gapminder)
+#gapminder <- read.csv("../data/gapminder_data.csv")
+
+#Alternatively 
+
+if (!require('tidyverse')) install.packages('tidyverse'); library('tidyverse')
+if (!require('gapminder')) install.packages('gapminder'); library('gapminder')
+```
+
+Let's take a quick look at our data frame to remind ourselves of its structure.
+We do this using the `head()` command, which will display the first 6 rows
+of our data frame.
+```{r}
+head(gapminder)
+```
+
+## Quick aside on tibbles and data frames
+In R, one of the main types of objects/variables we're going to be working with
+is a **data frame**. This is much like a table you would view in Excel, where
+column represent variables or measures and rows represent measurements, samples,
+or observations. 
+
+Another data set is that a **tibble** which has 2 main differences. Tibbles never changes the input type - i.e No more worry of characters being automatically turned into strings. A tibble can have columns that are lists. There are other slight differences, for instance, tibbles can have non-standard variable names.
+
+What are we going to be working with? 
+
+```{r}
+class(gapminder)
+#The dataset that we are working with was originally a data.frame that has been coerced into a tibble, which is why multiple class names are returned by the `class()` function.
+```
+
+Gapminder is a df that was coerced into a tibble. 
+
+
+## Choose Columns: select
+
+The first function we'll be using is `select()`. This function let's us pick
+columns from our data frame, based on name (e.g. year) or by index (e.g. 3).
+
+
+Let's try using `select()` to pick out a few columns: "country", "year",
+"lifeExp", and "pop". We'll be assigning these columns to a new data frame,
+`gapminder_select`. Then we'll use `head()` to see if it worked.
+
+
+```{r}
+
+# select() code here
+## three ways to select
+(gapminder_select <- select(gapminder, country, year, lifeExp, pop))
+(gapminder_remove <- select(gapminder, -continent, -gdpPercap))
+(gapminder_select_index <- select(gapminder, 1,3:5)) #note we start indexing at 1
+
+
+(gapminder_reorder <- select(gapminder, pop, everything())) #basically reorder a dataframe
+
+(gapminder_rename <- rename(gapminder, population = pop )) #note that the current column name is the second value
+
+
+gapminder_letter <- select(gapminder, starts_with("p"))  #can also choose starting letter
+
+
+# NOTE THAT FOR LAST ONE, DO NOT 
+
+head(gapminder_rename)
+```
+
+As you can see, our new data frame contains only a subset of the columns from
+the original data frame, based on the names we provided in the `select()`
+command.
+
+
+Here we'll also introduce another great feature of `dplyr()`: the pipe (
+**%>%** ). This symbol sends or pipes an object (e.g. a data frame like
+gapminder) INTO a function (e.g. `select()`).
+
+So, the above `select()` command can be rewritten as follows (NOTE: the "." is a
+placeholder, which represents the object being piped). Again, we can check our
+result using `head()`.
+
+```{r}
+# select() using pipe syntax
+gapminder_pipe <- gapminder %>% 
+  select(., country, year, lifeExp, pop)
+
+
+head(gapminder_pipe)
+head(gapminder_select)
+```
+
+
+We can actually simplify the above command further - dplyr's functions such as
+`select()` are smart enough that you don't actually need to include the "."
+placeholder, as shown below.
+
+
+```{r}
+# select() using pipe syntax w/out a placeholder
+gapminder_pipe2 <- gapminder %>% select(country, year, lifeExp, pop)
+head(gapminder_pipe2)
+```
+
+
+### Challenge 1
+Using the `select()` command and pipe (` %>% `) notation, pick the following
+columns from the `gapminder` data frame, assign them to a new variable (we'll
+use **x**), and display the results using `head(x, n = 10)`. Columns to choose
+are:
+
+* continent
+* GDP per capita
+* life expectancy
+* year
+
+```{r, eval = FALSE}
+# Answer here:
+(x <- gapminder %>%
+  select(country, year, gdpPercap, lifeExp))
+
+head(x, n = 10L)
+```
+
+
+## Choose Rows: filter
+
+So we've covered selecting columns, but what about rows? This is where
+`filter()` comes in. This function allows us to choose rows from our data frame
+using some logical criteria. An example is filtering for rows in which the
+country is Canada. This can also be applied to numerical values, such as the
+year being equal to 1967, or life expectancy greater than 30.
+
+NOTE: In R, equality (e.g. country is Canada, year is 1967) is done using a
+double equals sign (`==`).
+
+
+Let's go through a couple examples. 
+
+```{r}
+# Filter rows where country is Canada
+gapminder_canada <- gapminder %>% filter(country == "Canada")
+head(gapminder_canada)
+
+## what if we wanted Canada and Albania?
+gapminder_canada_albania <- gapminder %>%
+    filter(country  %in%  c("Canada", "Albania"))
+```
+
+Let's try another one, this time filtering on life expectancy above a certain
+threshold:
+
+```{r}
+# Filter for rows where life expectancy is greater than 50
+gapminder_LE <- gapminder %>% filter(lifeExp > 50)
+head(gapminder_LE)
+```
+
+
+We can also filter with multiple arguments, each separated by a comma:
+
+```{r}
+# filter() for Canada and life expectancy greater than 80
+gapminder_C_LE <- gapminder %>% filter(country == "Canada", lifeExp > 80)
+head(gapminder_C_LE)
+```
+
+
+### Challenge 2
+Use `filter()` to choose data for African countries, from the year 1980 and
+onwards.
+
+```{r, eval = FALSE}
+# Challenge 2 code here
+
+```{r}
+(x <- gapminder %>%
+  filter(continent == "Africa", year >= 1980) %>%
+  arrange(desc(year))) #default is asccending, if you want descending you ahve to do arrange(desc(year))
+
+```
+
+
+## Create New Columns: mutate()
+
+Let's say we now want to calculate the GDP in billions, which is done by
+mutiplying the GDP per capita by the population, then dividing by 1 billion (1 *
+10^9). `mutate()` will perform this calculation on each row in the data frame,
+one row at a time (i.e. row-wise). The code below will calculate the GDP in
+billions:
+
+* `gdpPercap * pop / 10^9`
+
+```{r}
+# Use mutate() to calculate GDP in billions
+gapminder_gdpBil <- gapminder %>% 
+  mutate(gdp_billion = gdpPercap * pop / 10^9)
+
+head(gapminder_gdpBil)
+```
+
+```{r}
+# Answer here:
+(gapminder %>%
+ select(country, continent, year) %>%
+ mutate(across(everything(),as.factor)))
+```
+`
+We can also model "growth" from the original 
+```{r}
+answer1.1 <-
+    gapminder %>% 
+    group_by(country) %>% 
+    arrange(year) %>%
+    mutate(rel_growth = pop - dplyr::first(pop))
+```
+
+## Combine Functions with Pipes
+We've seen that pipes ( **%>%** ) can be used to send an object such as a data
+frame into a function, such as `select()`, or `filter()`. But they can also be
+used to send the output of one function into another function. This allows us to
+chain together multiple commmands, without the need for intermediate variables.
+
+Let's take a look at this in an example. 
+
+```{r}
+# select() the five columns, and filter() for Canada
+gapminder_multi <- gapminder %>% 
+    select(country, year, lifeExp, pop, gdpPercap) %>% 
+    filter(country == "Canada")
+head(gapminder_multi)
+```
+
+
+We can further expand on this by incorporating our `mutate()` command from
+earlier, linking multiple functions into a single command. Be sure to indent
+(`TAB` key) when moving to a new line after a pipe.
+
+```{r}
+# select() the four columns, filter() for Canada, and calculate GDP in billions
+gapminder_multi_2 <- gapminder %>% 
+    select(country, year, lifeExp, pop, gdpPercap) %>% 
+    filter(country == "Canada") %>% 
+    mutate(gdp_billion = gdpPercap * pop / 10^9)
+head(gapminder_multi_2)
+```
+
+
+Lets say now we wanteed to actually create a categorical variable based on life expectancy in 1997.
+
+```{r}
+(gapminder_1997 <- gapminder %>% 
+   filter(year == 1997) %>% 
+   mutate(life_level = case_when(lifeExp < 23 ~ "very low",
+                                 lifeExp < 48 ~ "low",
+                                 lifeExp < 59 ~ "moderate",
+                                 lifeExp < 70 ~ "high",
+                                 TRUE ~ "very high")))
+```
+
+Are there any problems? COPY AND PASTE THIS CODE. Don't have to follow this one.. Just for demonstration:
+
+```{r}
+ggplot(gapminder_1997) + geom_boxplot(aes(x = life_level, y = gdpPercap)) +
+  labs(y = "GDP per capita ($)", x= "Life expectancy level (years)") +
+  ggtitle("GDP per capita per Level of Life Expectancy") +
+  theme_bw() 
+```
+
+Two problems: very low had 0 samples, but shouldn't it be displayed on the graph. But more importantly, what's up with the ordering? high -> low -> moderate? Its alphabetically ordering it. 
+
+To fix it, we need to establish levels: 
+
+```{r}
+(gapminder_1997_fct <- gapminder %>% 
+   filter(year == 1997) %>% 
+   mutate(life_level = factor(case_when(lifeExp < 23 ~ "very low", #note we added a factor
+                                 lifeExp < 48 ~ "low",
+                                 lifeExp < 59 ~ "moderate",
+                                 lifeExp < 70 ~ "high",
+                                 TRUE ~ "very high"),
+                              levels = c("very low", "low", "moderate", "high", "very high")))) #note we add levels
+
+```
+
+```{r}
+ggplot(gapminder_1997_fct) + geom_boxplot(aes(x = life_level, y = gdpPercap)) +
+  labs(y = "GDP per capita ($)", x= "Life expectancy level (years)") +
+  ggtitle("GDP per capita per Level of Life Expectancy") +
+  theme_bw() 
+```
+
+## Calculations with group_by and summarise
+
+These functions allow us to work on our data in specific groups. For example, we
+can use `group_by()` to group observations by country, then calculate the
+average life expectancy for each country. Summarise creates a new dataframe that will have on or more rows for each combination of grouping variables.
+
+```{r}
+# group_by() country, calculate average life expectancy
+gapminder_grp <- gapminder %>% 
+  group_by(country) %>% 
+  summarise(mean(lifeExp))
+
+head(gapminder_grp)
+```
+
+
+Let's do another example, again grouping by country. This time, we'll calculate
+the mean and standard deviation of the GDP per capita. We'll also specify the
+column names inside of the `summarise()` command.
+
+```{r}
+gapminder_mean_sd <- gapminder %>% 
+    group_by(country) %>% 
+    summarise(mean_gdp = mean(gdpPercap), sd_gdp = sd(gdpPercap))
+head(gapminder_mean_sd)
+```
+
+
+## Tying it all together
+
+Now let's use all the commands we've covered and combine them with pipes into a
+single statement.
+
+Let's say we want calculate the mean and SD of the GDP (in billions) for each
+country, but only considering data from 1980 and onwards. We can accomplish this
+all in one step as follows.
+
+```{r}
+# select() columns, filter() by year, calculate GDP in billions, mean() and sd()
+# of GDP in billions
+gapminder_final <- gapminder %>% 
+    select(country, year, pop, gdpPercap) %>% 
+    filter(year >= 1980) %>% 
+    mutate(gdp_billion = gdpPercap * pop / 10^9) %>% 
+    group_by(country) %>% 
+    summarise(mean_gdpBillion = mean(gdp_billion), sd_gdpBillion = sd(gdp_billion))
+head(gapminder_final)
+```
+
+Second final challenge
++ Add a column called `min_life` of the *minimum* life expectancy for each continent and each year of the `gapminder` dataset -- but keep the same amount of rows as in the original gapminder data set.
++ Add a column called `min_country` containing the country name having the lowest life expectancy for that year and that continent -- again, keeping the same amount of rows as the original.
++ `arrange` by min life expectancy
+
+```{r}
+(gapminder_final_2 <- gapminder %>% 
+  group_by(continent) %>% 
+  mutate(min_life = min(lifeExp),
+               min_country = country[lifeExp == min_life]) %>%
+  arrange(min_life))
+```
