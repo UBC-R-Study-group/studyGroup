@@ -40,7 +40,7 @@ the study group.
 | 2021 Feb 3  | Intro to data manipulation with the tidyverse | travis-m-blimkie, zhemingfan | [118](https://github.com/UBC-R-Study-group/studyGroup/issues/118) |
 | 2021 Feb 10 | Writing functions in R                        | travis-m-blimkie             | [119](https://github.com/UBC-R-Study-group/studyGroup/issues/119) |
 | 2021 Feb 17 | READING WEEK - NO MEET UP                     |                              |                                                                   |
-| 2021 Feb 24 | Shiny                                         | zhemingfan                   |                                                                   |
+| 2021 Feb 24 | Shiny                                         | zhemingfan                   | [120](https://github.com/UBC-R-Study-group/studyGroup/issues/120) |
 | 2021 Mar 3  | TBD                                           |                              |                                                                   |
 | 2021 Mar 10 | An introduction to git                        | travis-m-blimkie             |                                                                   |
 | 2021 Mar 17 | Using git with RStudio                        |                              |                                                                   |
