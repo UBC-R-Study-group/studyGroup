@@ -88,7 +88,7 @@ pumpkin_pie <- function(pumpkin, crust, egg) {
 ## Example Function for Area 
 ```{r function_demo}
 # Fill in the template
-# Variables passed as your arguments are referenced in the function's body
+# Variables passed as arguments are referenced in the function's body
 # Running it will give you a new function in your environment
 tri_area <- function(height, base) {
   height * base / 2
