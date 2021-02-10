@@ -32,7 +32,7 @@ library(tidyverse)
 - You have used functions in the past like `sum()`, `mean()`, `filter()`
 - Under the hood these are powered by lines of R code
 - You can see this by going command + click the function name
-- Does not work for all functions (ie base R)
+- Does not work for all functions (i.e. base R)
 
 ```{r source, eval = FALSE}
 filter()
@@ -41,11 +41,16 @@ mean()
 
 ## Basic Structure
 
+- Define the function
+- Specify the inputs, or arguments
+- Write the R code which performs the chosen task
+- Return the output
 ```{r structure}
 name_of_function <- function(ingredient_1) {
   # Body of your function
   # Where your R code goes
-  # "Recipe goes here"
+  # "Recipe" goes here
+  # Should return the result
 }
 ```
 
@@ -70,12 +75,12 @@ Recipe:
 <div style="float: right; width: 60%;">
 ### R code
 ```{r pie_function}
-Pumpkin_pie <- function(pumpkin, p_crust) {
-# 1. Preheat the oven to 350F
-# 2. Whisk together pumpkin, egg
-# 3. Pour mixture into crust
-# Makes a pi - automatically `returns`
-# its result
+pumpkin_pie <- function(pumpkin, crust, egg) {
+  # 1. Preheat the oven to 350F
+  # 2. Whisk together pumpkin, egg
+  # 3. Pour mixture into crust
+  # Makes a pi - automatically `returns`
+  # its result
 }
 ```
 </div>
@@ -83,11 +88,11 @@ Pumpkin_pie <- function(pumpkin, p_crust) {
 ## Example Function for Area 
 ```{r function_demo}
 # Fill in the template
-# Variables in your arguments can be referenced in your body
-tri_area <- function(height, base) {
-  height * base / 2 
-}
+# Variables passed as your arguments are referenced in the function's body
 # Running it will give you a new function in your environment
+tri_area <- function(height, base) {
+  height * base / 2
+}
 
 tri_area(1, 5)
 ```
@@ -133,13 +138,13 @@ debug <- function(height, base){
   1 + 2
   height * base / 2
 }
-debug(1,2)
+debug(1, 2)
 
 debug2 <- function(height, base) {
   print(1 + 2)
   height * base / 2
 }
-debug2(1,2)
+debug2(1, 2)
 ```
 
 ## Pitfalls
@@ -149,13 +154,14 @@ debug2(1,2)
 
 ## Pitfalls - Tidy Evaluation
 
-Trying this for ggplot2, using the built-in **mtcars** dataset
+Let's look at an example with ggplot2, using the built-in **mtcars** dataset
 ```{r mtcars_dataset}
 data("mtcars")
 mtcars
 ```
 
-## But the function below doesn't work!
+## Write a function which contains ggplot2()
+Everything looks OK, but if you try to run it, it fails!
 ```{r error_mtcars, results = "hide", eval = FALSE}
 # Normal ggplot2 call:
 ggplot(mtcars, aes(x = mpg, y = wt)) +

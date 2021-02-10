@@ -3221,7 +3221,7 @@ slide:not(.current) .plotly.html-widget{
 <li>You have used functions in the past like <code>sum()</code>, <code>mean()</code>, <code>filter()</code></li>
 <li>Under the hood these are powered by lines of R code</li>
 <li>You can see this by going command + click the function name</li>
-<li>Does not work for all functions (ie base R)</li>
+<li>Does not work for all functions (i.e. base R)</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>filter()
@@ -3229,10 +3229,18 @@ mean()</pre>
 
 </article></slide><slide class=""><hgroup><h2>Basic Structure</h2></hgroup><article  id="basic-structure">
 
+<ul>
+<li>Define the function</li>
+<li>Specify the inputs, or arguments</li>
+<li>Write the R code which performs the chosen task</li>
+<li>Return the output</li>
+</ul>
+
 <pre class = 'prettyprint lang-r'>name_of_function &lt;- function(ingredient_1) {
   # Body of your function
   # Where your R code goes
-  # &quot;Recipe goes here&quot;
+  # &quot;Recipe&quot; goes here
+  # Should return the result
 }</pre>
 
 </article></slide><slide class=""><hgroup><h2>🍰</h2></hgroup><article  id="section" class="smaller">
@@ -3261,22 +3269,22 @@ mean()</pre>
 <div style="float: right; width: 60%;">
 <h3>R code</h3>
 
-<pre class = 'prettyprint lang-r'>Pumpkin_pie &lt;- function(pumpkin, p_crust) {
-# 1. Preheat the oven to 350F
-# 2. Whisk together pumpkin, egg
-# 3. Pour mixture into crust
-# Makes a pi - automatically `returns`
-# its result
+<pre class = 'prettyprint lang-r'>pumpkin_pie &lt;- function(pumpkin, crust, egg) {
+  # 1. Preheat the oven to 350F
+  # 2. Whisk together pumpkin, egg
+  # 3. Pour mixture into crust
+  # Makes a pi - automatically `returns`
+  # its result
 }</pre></div>
 
 </article></slide><slide class=""><hgroup><h2>Example Function for Area</h2></hgroup><article  id="example-function-for-area">
 
 <pre class = 'prettyprint lang-r'># Fill in the template
-# Variables in your arguments can be referenced in your body
-tri_area &lt;- function(height, base) {
-  height * base / 2 
-}
+# Variables passed as your arguments are referenced in the function&#39;s body
 # Running it will give you a new function in your environment
+tri_area &lt;- function(height, base) {
+  height * base / 2
+}
 
 tri_area(1, 5)</pre>
 
@@ -3323,7 +3331,7 @@ tri_area(1, 5)</pre>
   1 + 2
   height * base / 2
 }
-debug(1,2)</pre>
+debug(1, 2)</pre>
 
 <pre >[1] 1</pre>
 
@@ -3331,7 +3339,7 @@ debug(1,2)</pre>
   print(1 + 2)
   height * base / 2
 }
-debug2(1,2)</pre>
+debug2(1, 2)</pre>
 
 <pre >[1] 3</pre>
 
@@ -3346,7 +3354,7 @@ debug2(1,2)</pre>
 
 </article></slide><slide class=""><hgroup><h2>Pitfalls - Tidy Evaluation</h2></hgroup><article  id="pitfalls---tidy-evaluation">
 
-<p>Trying this for ggplot2, using the built-in <strong>mtcars</strong> dataset</p>
+<p>Let’s look at an example with ggplot2, using the built-in <strong>mtcars</strong> dataset</p>
 
 <pre class = 'prettyprint lang-r'>data(&quot;mtcars&quot;)
 mtcars</pre>
@@ -3363,7 +3371,9 @@ Merc 240D         24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
 Merc 230          22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 23 rows ]</pre>
 
-</article></slide><slide class=""><hgroup><h2>But the function below doesn’t work!</h2></hgroup><article  id="but-the-function-below-doesnt-work">
+</article></slide><slide class=""><hgroup><h2>Write a function which contains ggplot2()</h2></hgroup><article  id="write-a-function-which-contains-ggplot2">
+
+<p>Everything looks OK, but if you try to run it, it fails!</p>
 
 <pre class = 'prettyprint lang-r'># Normal ggplot2 call:
 ggplot(mtcars, aes(x = mpg, y = wt)) +
