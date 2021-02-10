@@ -43,7 +43,7 @@ the study group.
 | 2021 Feb 24 | Shiny                                         | zhemingfan                   | [120](https://github.com/UBC-R-Study-group/studyGroup/issues/120) |
 | 2021 Mar 3  | TBD                                           |                              |                                                                   |
 | 2021 Mar 10 | An introduction to git                        | travis-m-blimkie             |                                                                   |
-| 2021 Mar 17 | Using git with RStudio                        |                              |                                                                   |
+| 2021 Mar 17 | Using git with RStudio                        | travis-m-blimkie             |                                                                   |
 | 2021 Mar 24 | R package development                         | zhemingfan                   |                                                                   |
 | 2021 Mar 31 | TBD                                           |                              |                                                                   |
 | 2021 Apr 7  | TBD                                           |                              |                                                                   |
