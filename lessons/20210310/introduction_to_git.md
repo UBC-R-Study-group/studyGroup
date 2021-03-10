@@ -16,7 +16,7 @@ into some examples on using git/Github with RStudio.
 ## Overview for today
 
 - What is git?
-  - What's the difference between git and Github?
+- What's the difference between git and Github?
 - Benefits of using git
 - Basic git commands
 - Git workflow
@@ -27,15 +27,14 @@ into some examples on using git/Github with RStudio.
 
 ## What is git?
 
-- Git is a program/language that is designed to facilitate version
-control
-- We can keep track of changes we make to files, and provide messages whenever
-we change things
-- Reverting changes, or tracking down why certain changes were made is much
-easier than manually attempting this
-- It can actually be used completely offline to manage projects 
-- Once we go online, git allows us to collaborate with others and simultaneously
-contribute to a project
+- Git is a program/tool that is designed to facilitate version control
+- We can keep track of changes we make to files, and provide messages to explain
+what's changing and why
+- Reverting changes, or tracking down why certain changes were made becomes much 
+easier
+- It can also be used completely offline to manage projects
+- When used online (i.e. with Github), git allows us to collaborate with others
+and simultaneously contribute to a project
 
 Side note: there are other version control programs that accomplish the same
 thing as git, such as Subversion and Mercurial.
@@ -46,7 +45,7 @@ thing as git, such as Subversion and Mercurial.
 - Github is a specific website/service that allows us to host projects online,
 and collaborate with others
 - You can start a project locally, and use git to interact with the online
-version of the project on Github
+version of the project (repository) on Github
 - Adds some extra functionality to make sharing and collaborating on code even
 easier, like issues, projects, Github pages, etc.
 
@@ -60,28 +59,29 @@ Gitlab.
 - Makes sharing and contributing to code easier
 - Because it serves as an "automatic backup", we're free to experiment without
 fear of impacting functional code
-- Encourages incremental work - small changes that add up over time
+- Encourages incremental and documented work
 - Exposes your work to the open source world
 
 
 ## Primary git commands
 
 - STATUS - See if/how your local version of the repository has changed
-(diverged) from the online copy
-- ADD - after changing a file, you add or stage it to the next commit
+(diverged) from the online version
+- ADD - after changing a file, you add or stage it be included in the next
+commit
 - COMMIT - "commit" to making the added change, and provide a message to explain
 what changed and why
-- PUSH - Send those committed changes to the remote copy of the project (i.e. on
-Github)
+- PUSH - Send those committed changes to the remote version of the project (i.e.
+a repository on Github)
 - PULL - Apply changes on the remote repository to your own local copy (i.e.
 changes made by a collaborator on their machine)
 
 
 ## Example workflow
 
-- Edit a file -  you found and fixed a type in the main script
-- `git status` to see what files have changed
-- `git pull` if you're local version is behind the online version
+- Edit a file - you found and fixed a typo in the main script
+- `git fetch` & `git status` to see what files have changed
+  - `git pull` if you're local version is behind the online version
 - `git add script.R` to stage the affected file
 - `git commit -m "Fixed a typo"` to commit the change with a message
 - `git push` to send your committed changes to Github
@@ -95,24 +95,26 @@ changes made by a collaborator on their machine)
 
 - `clone` - Download a repository from Github to your local machine
 - `diff some.file` - See how a file has been changed
-- `fork` - Create a copy (branch) of someone else's repository
-- `branch` - Create a separate (but related) copy of your own repository - more
+- `branch` - Create a separate (but related) copy of q repository - more
 on this in a minute
-- `merge` and **pull request** - add or apply the changes from one branch of
-fork into another
+- `fork` - Create a branch of someone else's repository
+- `merge` and **pull request** - add or apply the changes from one branch or
+fork into another (i.e. merge the changes from a testing branch into a "stable"
+branch)
 
 
 ## Aside on git status and fetch
 
 - When you run `status`, your local working directory is compared against a
-local file, which represents the state of the remote repository (i.e. Github)
+special local file, which holds the state of the remote repository (i.e.
+Github)
 - If you make a change on Github directly, then run `status` on your local
 machine, it will report that you're up-to-date, even though you know you're
 behind
 - This is because the local representative file hasn't been updated by the
 status command
-- Here is where you need to run `fetch`, to update the local representation of
-the remote, followed by `status` to see that you're behind by one commit
+- `fetch` will update the local representation of the remote; then you can run
+`status` to see that you're behind by one commit
 
 
 ## Git fetch and status (continued)
@@ -125,9 +127,8 @@ So to check if you're behind the remote:
 
 Important to do this BEFORE you start making local changes
 
+![](basic_git_workflow2.png)
 
-## Expanded git workflow
-![](expanded_git_workflow.png)
 
 ## Workflow for git + RStudio
 
@@ -136,9 +137,9 @@ Important to do this BEFORE you start making local changes
 - Make some changes
 - Add, commit, push & repeat!
 
-RStudio includes some great integration for working with git, providing GUI 
-access to all most of the previously mentioned git commands (or at least the
-most common ones).
+RStudio includes some great integration for working with git, providing GUI
+access to most of the previously mentioned git commands (certainly the most
+common ones).
 
 
 ## Preview of RStudio's git pane
@@ -154,9 +155,9 @@ still linked to the original version
 - These changes can then be merged into the new branch all at once
 - Great for keeping a working/stable version of code while also facilitating 
 experimentation
-- E.g. stable and development versions of packages or projects one common
-example
-- Production and testing as another
+  - E.g. stable and development versions of packages or projects one common
+  example
+  - Production and testing as another
 
 
 ## Visualizing branches
@@ -172,12 +173,17 @@ example
 version 
 - Forking a repository can allow you or anyone else to contribute to large, 
 open source projects
-- E.g. [RStudio!](https://github.com/rstudio/rstudio)
+  - E.g. [RStudio!](https://github.com/rstudio/rstudio)
 
 
+## Expanded git workflow
+![](expanded_git_workflow.png)
+
+  
 ## Homework for next week
 
 - Set up a [Github account](https://github.com/join)
 - Ensure git is installed on your computer
-- For Windows: [Install git for Windows](https://git-scm.com/download/win)
-- For Mac: [Install git for Mac](https://git-scm.com/download/mac)
+  - For Windows: [Install git for Windows](https://git-scm.com/download/win)
+  - For Mac: [Install git for Mac](https://git-scm.com/download/mac)
+
