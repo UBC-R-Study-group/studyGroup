@@ -14,12 +14,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Before we get started
 
+Today we will cover some basics of git (background/theory); next week we'll dive
+into some examples on using git/Github with RStudio.
+
 This lesson was inspired by the "What they forgot to teach you about R" seminar,
 originally presented by Jenny Byran, Jim Hester, and Alison Hill. Here's a link
 to the original material: https://rstats.wtf/
-
-Today we will cover some basics of git (background/theory); next week we'll dive
-into some examples on using git/Github with RStudio.
 
 
 ## Overview for today
