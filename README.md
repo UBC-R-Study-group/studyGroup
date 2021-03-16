@@ -43,10 +43,9 @@ the study group.
 | 2021 Feb 24 | Shiny                                         | zhemingfan                   | [120](https://github.com/UBC-R-Study-group/studyGroup/issues/120) |
 | 2021 Mar 3  | Iteration with purrr                          | travis-m-blimkie             | [124](https://github.com/UBC-R-Study-group/studyGroup/issues/124) |
 | 2021 Mar 10 | An introduction to git                        | travis-m-blimkie             | [125](https://github.com/UBC-R-Study-group/studyGroup/issues/125) |
-| 2021 Mar 17 | Using git with RStudio                        | travis-m-blimkie             | [126](https://github.com/UBC-R-Study-group/studyGroup/issues/125) |
-| 2021 Mar 24 | R package development                         | zhemingfan                   |                                                                   |
+| 2021 Mar 17 | Using git with RStudio                        | travis-m-blimkie             | [126](https://github.com/UBC-R-Study-group/studyGroup/issues/126) |
+| 2021 Mar 24 | R package development                         | zhemingfan                   | [127](https://github.com/UBC-R-Study-group/studyGroup/issues/127) |
 | 2021 Mar 31 | TBD                                           |                              |                                                                   |
-| 2021 Apr 7  | TBD                                           |                              |                                                                   |
 
 ## What's a Work-A-Long session?
 These sessions are meant as an opportunity for you to come and ask questions or
