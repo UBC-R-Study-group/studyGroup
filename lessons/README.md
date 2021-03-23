@@ -18,7 +18,7 @@ Old schedules should also be included here in the form of a markdown table; see 
 | 2021 Mar 10 | An introduction to git                        | travis-m-blimkie             | [125](https://github.com/UBC-R-Study-group/studyGroup/issues/125) |
 | 2021 Mar 17 | Using git with RStudio                        | travis-m-blimkie             | [126](https://github.com/UBC-R-Study-group/studyGroup/issues/126) |
 | 2021 Mar 24 | R package development                         | zhemingfan                   | [127](https://github.com/UBC-R-Study-group/studyGroup/issues/127) |
-| 2021 Mar 31 | TBD                                           |                              |                                                                   |
+| 2021 Mar 31 | Tidying data with tidyR                       | travis-m-blimkie             | [129](https://github.com/UBC-R-Study-group/studyGroup/issues/129) |
 
 
 ### Winter 2020
