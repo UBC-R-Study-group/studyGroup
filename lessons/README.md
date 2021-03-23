@@ -4,7 +4,7 @@ When adding lesson materials, place into a new folder named according to the dat
 Old schedules should also be included here in the form of a markdown table; see existing entries for a template on how to set this up.
 
 
-## Winter 2021
+### Winter 2021
 | Date        | Event                                         | Lead                         | Issue                                                             |
 |:------------|:----------------------------------------------|:-----------------------------|:------------------------------------------------------------------|
 | 2021 Jan 13 | Introductions & RMarkdown Tutorial            | travis-m-blimkie, zhemingfan | [115](https://github.com/UBC-R-Study-group/studyGroup/issues/115) |
