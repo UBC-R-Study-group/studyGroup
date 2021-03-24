@@ -1,0 +1,115 @@
+---
+title: "Packages_Lesson"
+author: "Jeremy Fan"
+date: "23/03/2021"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  include = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = ""
+)
+library(tidyverse)
+```
+
+## Outline
+- What are packages?
+- Writing your own package
+
+## Why Packages?
+- Reduce the amount of copy & pasting required
+    - Reduces the chances of making a mistake
+- Help tackle a novel problem that others are interested in too
+- CRAN brownie points
+
+## Functions
+- You have used functions in the past like `sum()`, `mean()`, `filter()`
+- Under the hood these are powered by lines of R code
+- To view documentation of a function - you can type in `?function_name()` in your console.
+- To view the source of a function - you can type in the `function_name` in your console.
+
+```{r create_package_workflow, eval = FALSE}
+# Create package
+# usethis::create_package("/Users/owner/Documents/UBC/Projects/studyGroup/lessons/20210324/sample_package") #won't work
+usethis::create_package("/Users/owner/Documents/UBC/Projects/studyGroup/lessons/20210324/samplePackage")
+
+# Make a R script containing key function
+usethis::use_r("sample_class") # Note that this command MUST be done within the package. 
+
+# Load a package
+devtools::load_all() # loads a package. It roughly simulates what happens when a package is installed and loaded with `library()`. After making changes to the functions, make sure this is ran. 
+
+# Check the package intact
+devtools::check() # a very important command - make sure to check that there are no errors associated with the package.
+
+# Add a license
+usethis::use_mit_license("Jeremy Fan")
+
+# Update documentation
+devtools::document()
+
+# install package
+devtools::install()
+
+# Create tests for package and test them
+usethis::use_testthat()
+usethis::use_test("sample_class")
+devtools::test()
+
+# Indicates dependencies
+usethis::use_package("purrr")
+
+# Add a package README and render it
+usethis::use_readme_rmd()
+devtools::build_readme()
+
+# Build all vignettes
+devtools::build_vignettes()
+
+# Add a code of conduct
+usethis::use_code_of_conduct()
+
+# Make a package website
+#install.packages('pkgdown')
+usethis::use_pkgdown()
+pkgdown::build_site()
+
+# Activate with GitHub Pages
+usethis::use_github_action("pkgdown")
+
+# Add to the Changelog
+usethis::use_news_md()
+
+# Add a badge
+usethis::use_lifecycle_badge("Experimental")
+
+```
+
+## Reminder: Basic Structure of Functions
+
+- Define the function
+- Specify the inputs, or arguments
+- Write the R code which performs the chosen task
+- Return the output
+```{r structure}
+name_of_function <- function(ingredient_1) {
+  # Body of your function
+  # Where your R code goes
+  # "Recipe" goes here
+  # Should return the result
+}
+```
+
+### R code for Sample functions
+## Example Function for Area 
+```{r function_demo}
+# Fill in the template
+# Variables passed as arguments are referenced in the function's body
+# Running it will give you a new function in your environment
+tri_area <- function(height, base) {
+  height * base / 2
+}
+```
