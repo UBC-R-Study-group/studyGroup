@@ -35,9 +35,8 @@ storms <- read_csv(
 3.  [Other useful functions from
     tidyr](#other-useful-functions-from-tidyr): Separate and Unite
       - Challenge Question 2
-4.  [Final Example](#final-example)
-5.  [Further Reading](#further-reading)
-6.  [Solutions](#solutions) for Challenge Questions
+4.  [Further Reading](#further-reading)
+5.  [Solutions](#solutions) for Challenge Questions
 
 ## Why Tidy?
 
