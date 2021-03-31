@@ -2,7 +2,7 @@
 title: "tidyr Tutorial"
 author: "Travis Blimkie"
 date: "`r format(Sys.Date())`"
-output: github_document
+output: html_document
 ---
 
 ```{r setup, include = FALSE}
@@ -12,19 +12,20 @@ knitr::opts_chunk$set(echo = TRUE, comment = "")
 ## Requiremnts
 ```{r, message = FALSE}
 # Install packages
-# devtools::install_github("rstudio/EDAWR")
 # install.packages("tidyverse")
 
 # Load packages
 library(EDAWR)
 library(tidyverse)
 
-# Data
+# LotR Data
 lotr_tidy_pre <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/lotr_tidy.csv")
-
 fellowship <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Fellowship_Of_The_Ring.csv")
 towers <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Two_Towers.csv")
 king <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Return_Of_The_King.csv")
+
+# EDAWR Data
+
 ```
 
 
@@ -137,7 +138,7 @@ In the EDAWR dataset, `cases`, we have the number of tuberculosis cases reported
 in France, Germany and United States from 2011 to 2013. What are the total
 number of tuberculosis cases reported over three years for each country?
 ```{r}
-(cases <- EDAWR::cases)
+cases
 
 # Challenge code here!
 ```
@@ -149,7 +150,7 @@ number of tuberculosis cases reported over three years for each country?
 Let's use the EDAWR dataset again. This time, we are going to use the `storms`
 data, which has the maximum wind speeds for six Atlantic hurricanes.
 ```{r}
-(storms <- EDAWR::storms)
+storms
 ```
 
 `separate()` allows you to separate a column into multiple other columns by
