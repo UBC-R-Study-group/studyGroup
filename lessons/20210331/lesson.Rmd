@@ -1,8 +1,8 @@
 ---
-title: "tidyr Tutorial"
+title: "A Tutorial on Tidy Data"
 author: "Travis Blimkie"
-date: "`r format(Sys.Date())`"
-output: html_document
+date: "March 31st, 2021"
+output: github_document
 ---
 
 ```{r setup, include = FALSE}
@@ -15,7 +15,6 @@ knitr::opts_chunk$set(echo = TRUE, comment = "")
 # install.packages("tidyverse")
 
 # Load packages
-library(EDAWR)
 library(tidyverse)
 
 # LotR Data
@@ -25,7 +24,12 @@ towers <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGro
 king <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Return_Of_The_King.csv")
 
 # EDAWR Data
-
+cases <- read_csv(
+  "https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/EDAWR_cases.csv"
+)
+storms <- read_csv(
+  "https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/EDAWR_storms.csv"
+)
 ```
 
 
@@ -60,10 +64,10 @@ This is also known as "long" data format.
 
 
 ### Example of untidy data (Jenny Bryan, STAT545)
-![Untidy data, Jenny Bryan.](www/untidy_lotr.png)
+![](www/untidy_lotr.png)
 
 ### Example of *tidy* data
-![Tidy data](www/tidy_lotr.png)
+![](www/tidy_lotr.png)
 
 
 ### Consider the differences...
@@ -165,12 +169,24 @@ using a separator. For example, if we want to separate the `date` column into
 ))
 ```
 
-
 ### Challenge Question 2
 How do you combine the three separate columns, `year`, `month`, `day`, that you
 just created in `storms.sep` back into one column, `date`? Hint: `unite()` works
 the opposite way as `separate()`.
+```{r eval = FALSE}
+# Code for Challenge Question 2
+storms_new <- unite(...)
+```
 
+### Removing NA Values
+Another useful function from tidy is `drop_na` which as you can guess, allows
+us to remove rows containing NA values from our dataframe/tibble. You can apply
+this function to the dataframe as a whole (i.e. all columns), or provide a 
+specific column. Let's look at an example:
+```{r}
+smiths
+drop_na(smiths)
+```
 
 ## Further Reading
 

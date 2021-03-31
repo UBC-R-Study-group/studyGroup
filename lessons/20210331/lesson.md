@@ -1,35 +1,40 @@
-tidyr Tutorial
+A Tutorial on Tidy Data
 ================
 Travis Blimkie
-2021-03-22
+March 31st, 2021
 
 ## Requiremnts
 
 ``` r
 # Install packages
-# devtools::install_github("rstudio/EDAWR")
 # install.packages("tidyverse")
 
 # Load packages
-library(EDAWR)
 library(tidyverse)
 
-# Data
+# LotR Data
 lotr_tidy_pre <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/lotr_tidy.csv")
-
 fellowship <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Fellowship_Of_The_Ring.csv")
 towers <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Two_Towers.csv")
 king <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/The_Return_Of_The_King.csv")
+
+# EDAWR Data
+cases <- read_csv(
+  "https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/EDAWR_cases.csv"
+)
+storms <- read_csv(
+  "https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup/gh-pages/lessons/20210331/data/EDAWR_storms.csv"
+)
 ```
 
 ## Outline
 
 1.  [Why Tidy?](#why-tidy)
 2.  [How to Tidy](#how-to-tidy)
-    -   Challenge Question 1
+      - Challenge Question 1
 3.  [Other useful functions from
     tidyr](#other-useful-functions-from-tidyr): Separate and Unite
-    -   Challenge Question 2
+      - Challenge Question 2
 4.  [Final Example](#final-example)
 5.  [Further Reading](#further-reading)
 6.  [Solutions](#solutions) for Challenge Questions
@@ -42,33 +47,33 @@ king <- read_csv("https://raw.githubusercontent.com/UBC-R-Study-group/studyGroup
 
 ### What is tidy data?
 
--   Every column in your dataframe represents a variable
--   Every row represents an observation
+  - Every column in your dataframe represents a variable
+  - Every row represents an observation
 
 This is also known as “long” data format.
 
 ### Why do we need tidy data?
 
--   Consistent data structure - easier to manipulate
--   Preferred format for `dplyr`, `mutate`, and `ggplot2`
+  - Consistent data structure - easier to manipulate
+  - Preferred format for `dplyr`, `mutate`, and `ggplot2`
 
 ### Example of untidy data (Jenny Bryan, STAT545)
 
-![Untidy data, Jenny Bryan.](www/untidy_lotr.png)
+![](www/untidy_lotr.png)
 
 ### Example of *tidy* data
 
-![Tidy data](www/tidy_lotr.png)
+![](www/tidy_lotr.png)
 
 ### Consider the differences…
 
--   What are the variables and observations?
--   What makes the first set tidy while the second is untidy?
-    -   What is human-readable (untidy), v.s. computer-readable (tidy)?
--   How would you figure out:
-    -   What’s the total number of words spoken by male hobbits in all
+  - What are the variables and observations?
+  - What makes the first set tidy while the second is untidy?
+      - What is human-readable (untidy), v.s. computer-readable (tidy)?
+  - How would you figure out:
+      - What’s the total number of words spoken by male hobbits in all
         three movies?
-    -   Is there a more talkative `Race`?
+      - Is there a more talkative `Race`?
 
 Using a previously saved & tidied dataset, we can see it is very easy to
 manipulate the tidy version:
@@ -141,10 +146,10 @@ This dataframe is still untidy because “word count” is spread out
 between two columns, `Male` and `Female`. So to make this dataframe
 tidy, we need to:
 
--   `pivot_longer()` to combine the word counts into one column
--   Create a new column for `Sex`
+  - `pivot_longer()` to combine the word counts into one column
+  - Create a new column for `Sex`
 
-Time to make this dataframe tidy!
+Time to make this dataframe tidy\!
 
 ``` r
 (lotr_tidy <- pivot_longer(
@@ -214,13 +219,15 @@ are the total number of tuberculosis cases reported over three years for
 each country?
 
 ``` r
-(cases <- EDAWR::cases)
+cases
 ```
 
-      country  2011  2012  2013
-    1      FR  7000  6900  7000
-    2      DE  5800  6000  6200
-    3      US 15000 14000 13000
+    # A tibble: 3 x 4
+      country `2011` `2012` `2013`
+      <chr>    <dbl>  <dbl>  <dbl>
+    1 FR        7000   6900   7000
+    2 DE        5800   6000   6200
+    3 US       15000  14000  13000
 
 ``` r
 # Challenge code here!
@@ -235,16 +242,18 @@ Let’s use the EDAWR dataset again. This time, we are going to use the
 hurricanes.
 
 ``` r
-(storms <- EDAWR::storms)
+storms
 ```
 
-        storm wind pressure       date
-    1 Alberto  110     1007 2000-08-03
-    2    Alex   45     1009 1998-07-27
-    3 Allison   65     1005 1995-06-03
-    4     Ana   40     1013 1997-06-30
-    5  Arlene   50     1010 1999-06-11
-    6  Arthur   45     1010 1996-06-17
+    # A tibble: 6 x 4
+      storm    wind pressure date      
+      <chr>   <dbl>    <dbl> <date>    
+    1 Alberto   110     1007 2000-08-03
+    2 Alex       45     1009 1998-07-27
+    3 Allison    65     1005 1995-06-03
+    4 Ana        40     1013 1997-06-30
+    5 Arlene     50     1010 1999-06-11
+    6 Arthur     45     1010 1996-06-17
 
 `separate()` allows you to separate a column into multiple other columns
 by using a separator. For example, if we want to separate the `date`
@@ -259,15 +268,17 @@ column into `year`, `month`, `day`, we can do that by:
 ))
 ```
 
-    # A tibble: 6 x 6
-      storm    wind pressure year  month day  
-      <chr>   <int>    <int> <chr> <chr> <chr>
-    1 Alberto   110     1007 2000  08    03   
-    2 Alex       45     1009 1998  07    27   
-    3 Allison    65     1005 1995  06    03   
-    4 Ana        40     1013 1997  06    30   
-    5 Arlene     50     1010 1999  06    11   
-    6 Arthur     45     1010 1996  06    17   
+``` 
+# A tibble: 6 x 6
+  storm    wind pressure year  month day  
+  <chr>   <dbl>    <dbl> <chr> <chr> <chr>
+1 Alberto   110     1007 2000  08    03   
+2 Alex       45     1009 1998  07    27   
+3 Allison    65     1005 1995  06    03   
+4 Ana        40     1013 1997  06    30   
+5 Arlene     50     1010 1999  06    11   
+6 Arthur     45     1010 1996  06    17   
+```
 
 ### Challenge Question 2
 
@@ -275,18 +286,49 @@ How do you combine the three separate columns, `year`, `month`, `day`,
 that you just created in `storms.sep` back into one column, `date`?
 Hint: `unite()` works the opposite way as `separate()`.
 
+``` r
+# Code for Challenge Question 2
+storms_new <- unite(...)
+```
+
+### Removing NA Values
+
+Another useful function from tidy is `drop_na` which as you can guess,
+allows us to remove rows containing NA values from our dataframe/tibble.
+You can apply this function to the dataframe as a whole (i.e. all
+columns), or provide a specific column. Let’s look at an example:
+
+``` r
+smiths
+```
+
+    # A tibble: 2 x 5
+      subject     time   age weight height
+      <chr>      <dbl> <dbl>  <dbl>  <dbl>
+    1 John Smith     1    33     90   1.87
+    2 Mary Smith     1    NA     NA   1.54
+
+``` r
+drop_na(smiths)
+```
+
+    # A tibble: 1 x 5
+      subject     time   age weight height
+      <chr>      <dbl> <dbl>  <dbl>  <dbl>
+    1 John Smith     1    33     90   1.87
+
 ## Further Reading
 
 #### More tutorials
 
 Further examples and more in-depth coverage:
 
--   Jenny Bryan’s [LOTR GitHub
+  - Jenny Bryan’s [LOTR GitHub
     Repo](https://github.com/jennybc/lotr-tidy), with the Lord of the
     Rings dataset
--   [wmhall’s
+  - [wmhall’s
     tutorial](https://github.com/wmhall/tidyr_lesson/blob/master/tidyr_lesson.md)
--   [Hadley Wickham’s R for Data Science
+  - [Hadley Wickham’s R for Data Science
     Textbook](http://r4ds.had.co.nz/tidy-data.html) and [journal
     article](http://vita.had.co.nz/papers/tidy-data.pdf) on tidy data
 
@@ -295,8 +337,8 @@ Further examples and more in-depth coverage:
 Another package available, covering a wider array of data reshaping
 tools than tidyr. In reshape2
 
--   `melt` performs the function of `pivot_longer`
--   `cast` performs the function of `pivot_wider`
+  - `melt` performs the function of `pivot_longer`
+  - `cast` performs the function of `pivot_wider`
 
 ## Solutions
 
@@ -342,7 +384,7 @@ unite(
 
     # A tibble: 6 x 4
       storm    wind pressure date      
-      <chr>   <int>    <int> <chr>     
+      <chr>   <dbl>    <dbl> <chr>     
     1 Alberto   110     1007 2000-08-03
     2 Alex       45     1009 1998-07-27
     3 Allison    65     1005 1995-06-03
