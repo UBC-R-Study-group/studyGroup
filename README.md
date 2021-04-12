@@ -12,10 +12,10 @@ required to attend.
 
 ## Information for Summer 2021
 There will be no study group sessions held over the summer term, so stay tuned
-in here for updates on our plan for Fall 2021. In the meantime, if you have a
-question you would like to ask, feel free to find us on our Slack group, or post
-your question on our Help Desk, and one of the organizers will try and respond
-in a timely manner. Check our [issues
+to this page for updates on our plan for Fall 2021. In the meantime, if you have
+a question you would like to ask, feel free to find us on our Slack group, or
+post your question on our Help Desk, and one of the organizers will try and
+respond in a timely manner. Check our [issues
 page](https://github.com/UBC-R-Study-group/studyGroup/issues/) to find more
 information and links for both of these options. Cheers & stay safe!
 
