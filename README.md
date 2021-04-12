@@ -10,56 +10,32 @@ board](https://github.com/ubc-r-study-group/studyGroup/issues). Our regular
 Wednesday sessions are totally open; no sign-up, registration, or fee is
 required to attend.
 
-## Winter 2021 - Important Information
-Because of the ongoing situation with Covid-19 and the restrictions put in 
-place, **we will be holding all of our sessions for Winter 2021 virtually!** 
-Please check the relevant issue for each session to find the Zoom information.
-You will need a Zoom account in order to join our meetings (available for 
-free). Click [here](https://github.com/UBC-R-Study-group/studyGroup/issues) to 
-go to the issues page to find the appropriate entry.
+## Information for Summer 2021
+There will be no study group sessions held over the summer term, so stay tuned
+in here for updates on our plan for Fall 2021. In the meantime, if you have a
+question you would like to ask, feel free to find us on our Slack group, or post
+your question on our Help Desk, and one of the organizers will try and respond
+in a timely manner. Check our [issues
+page](https://github.com/UBC-R-Study-group/studyGroup/issues/) to find more
+information and links for both of these options. Cheers & stay safe!
 
-## Schedule
-Regular meetings of the UBC R Study Group are held every Wednesday, from 1-2pm.
-Please see below for more detailed information for 2021 meet-ups.
+## Past Lessons & Schedules
+The schedules for past terms and materials for most of our previous lessons are
+all available in our
+[lessons](https://github.com/UBC-R-Study-group/studyGroup/tree/gh-pages/lessons)
+folder, with contents organized by date. See the README within for tables with
+all the previous topics for which we have materials posted, to help if you're
+looking for a particular topic.
 
-Here's our *tentative* schedule for the semester. This might not be the most
-up-to-date; for that, please check the
-[issues](https://github.com/UBC-R-Study-group/studyGroup/issues).
-
+## For Prospective Organizers
 **We are always looking for people to lead our sessions!** Drop us a line at
 ubcrstudygroup@gmail.com or come to one of our sessions to connect if you are
 interested in teaching one of the lessons, or if you'd like to help organize
 the study group.
 
-## Winter 2021 Tentative Schedule
-| Date        | Event                                         | Lead                         | Issue                                                             |
-|:------------|:----------------------------------------------|:-----------------------------|:------------------------------------------------------------------|
-| 2021 Jan 13 | Introductions & RMarkdown Tutorial            | travis-m-blimkie, zhemingfan | [115](https://github.com/UBC-R-Study-group/studyGroup/issues/115) |
-| 2021 Jan 20 | Work-a-long                                   |                              | [116](https://github.com/UBC-R-Study-group/studyGroup/issues/116) |
-| 2021 Jan 27 | Plotting with ggplot2 and other libraries     | travis-m-blimkie             | [117](https://github.com/UBC-R-Study-group/studyGroup/issues/117) |
-| 2021 Feb 3  | Intro to data manipulation with the tidyverse | travis-m-blimkie, zhemingfan | [118](https://github.com/UBC-R-Study-group/studyGroup/issues/118) |
-| 2021 Feb 10 | Writing functions in R                        | travis-m-blimkie             | [119](https://github.com/UBC-R-Study-group/studyGroup/issues/119) |
-| 2021 Feb 17 | READING WEEK - NO MEET UP                     |                              |                                                                   |
-| 2021 Feb 24 | Shiny                                         | zhemingfan                   | [120](https://github.com/UBC-R-Study-group/studyGroup/issues/120) |
-| 2021 Mar 3  | Iteration with purrr                          | travis-m-blimkie             | [124](https://github.com/UBC-R-Study-group/studyGroup/issues/124) |
-| 2021 Mar 10 | An introduction to git                        | travis-m-blimkie             | [125](https://github.com/UBC-R-Study-group/studyGroup/issues/125) |
-| 2021 Mar 17 | Using git with RStudio                        | travis-m-blimkie             | [126](https://github.com/UBC-R-Study-group/studyGroup/issues/126) |
-| 2021 Mar 24 | R package development                         | zhemingfan                   | [127](https://github.com/UBC-R-Study-group/studyGroup/issues/127) |
-| 2021 Mar 31 | Tidying data with tidyR                       | travis-m-blimkie             | [129](https://github.com/UBC-R-Study-group/studyGroup/issues/129) |
-
-## What's a Work-A-Long session?
-These sessions are meant as an opportunity for you to come and ask questions or
-get help with a programming problem. Bring your code or data, get advice or
-tips, and chat with your fellow peers. Just like our other sessions, these are
-totally open, no registration needed.
-
-## Help Desk
-We have an open [issue](https://github.com/UBC-R-Study-group/studyGroup/issues/102) 
-which you can use to post quick questions; one of the organizers should be 
-able to respond in a timely manner.
-
 ## For Participants
-Welcome to our Mozilla Study Group! A few things to do & know now that you're here:
+Welcome to our Mozilla Study Group! A few things to do & know now that you're
+here:
 
  - **Watch this repo:** up in the top right, there's a button that says 'Watch';
  click it, and set yourself to 'Watching'. This will send you email
