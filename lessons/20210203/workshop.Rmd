@@ -113,9 +113,6 @@ Let's try using `select()` to pick out a few columns: "country", "year",
 
 gapminder_letter <- select(gapminder, starts_with("p"))  #can also choose starting letter
 
-
-# NOTE THAT FOR LAST ONE, DO NOT 
-
 head(gapminder_rename)
 ```
 
